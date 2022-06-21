@@ -1,0 +1,89 @@
+## Meter Reading Properties
+
+Meter readings are representative of the data found in the DBB-004 Meter Readings form
+
+```ts
+interface MeterReading {
+  date: string;
+  permitNumber: string;
+  flowMeter?: CalculatedValue;
+  powerMeter?: CalculatedValue;
+  powerConsumptionCoef?: CalculatedValue;
+  pumpedThisPeriod?: CalculatedValue;
+  pumpedYearToDate?: CalculatedValue;
+  availableThisYear?: CalculatedValue;
+  readBy?: string;
+  comments?: string;
+  createdAt?: string;
+  createdBy?: UserData;
+  updatedAt?: string;
+  updatedBy?: UserData;
+}
+
+interface CalculatedValue {
+  value: number;
+  shouldBe: number | undefined;
+  calculationState: "success" | "warning" | "error" | undefined;
+  source: "user" | "calculation";
+}
+```
+
+> Below is an example record in JSON
+
+```json
+{
+  "acreFeetAvailableThisYear": {
+    "calculationShouldBe": "210.00",
+    "calculationState": "success",
+    "source": "calculation",
+    "value": "210.00"
+  },
+  "acreFeetPumpedThisPeriod": {
+    "calculationShouldBe": "0.00",
+    "calculationState": "success",
+    "source": "calculation",
+    "value": "0.00"
+  },
+  "acreFeetPumpedYTD": {
+    "calculationShouldBe": "0.00",
+    "calculationState": "success",
+    "source": "calculation",
+    "value": "0.00"
+  },
+  "createdBy": {
+    "email": "td@gmail.com",
+    "fullName": "Tim Denning",
+    "uid": "ToGHzJm02sPbITrEv5UOLp1UzpB2"
+  },
+  "date": "2019/01",
+  "dateTimeCreated": "Mon, 31 Jan 2022 15:12:18 GMT",
+  "dateTimeUpdated": "Thu, 09 Jun 2022 15:02:11 GMT",
+  "flowMeter": {
+    "calculationState": "success",
+    "value": "399.63"
+  },
+  "permitNumber": "31643-FP",
+  "powerConsumptionCoef": {
+    "calculationState": "success",
+    "value": "285.36"
+  },
+  "powerMeter": {
+    "calculationState": "success",
+    "value": "40536.00"
+  },
+  "readBy": "GT",
+  "updatedBy": {
+    "email": "tim2@test.com",
+    "fullName": "Tim Denning",
+    "uid": "Hhi8HiISTgfHGT8Rgayy8JVFObD3"
+  }
+}
+```
+
+### Meter Reading Properties
+
+<%= partial "includes/meter-readings/properties/meter-reading-properties.md.erb" %>
+
+### Calculated Value Properties
+
+<%= partial "includes/meter-readings/properties/calculated-value-properties.md.erb" %>

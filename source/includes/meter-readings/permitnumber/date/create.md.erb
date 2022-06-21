@@ -1,0 +1,46 @@
+## Create a Meter Reading
+
+```shell
+curl -X POST "https://cowaternavigator/api/meter-readings/FP-63209/2022-06" \
+  -d {
+      "date": "2021-01",
+      "permitNumber": "FP-63209"
+    }
+
+```
+
+```javascript
+const kittn = require("kittn");
+
+let api = kittn.authorize("meowmeowmeow");
+let kittens = api.kittens.get();
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "date": "2021-01",
+  "permitNumber": "FP-63209"
+  // ...etc
+}
+```
+
+This endpoint creates a new meter reading.
+
+The record to be created should be send in the body of the request.
+
+<aside class="notice">
+  If a record already exists that matches the permitNumber and date of the request body - a "400 BadRequest" error will be returned.
+</aside>
+
+### HTTP Request
+
+`POST /api/meter-readings/{permitNumber}/{date}`
+
+### URL Parameters
+
+| Parameter    | Required | Description                               |
+| ------------ | -------- | ----------------------------------------- |
+| permitNumber | true     | A string matching the well permit number. |
+| date         | true     | A string formatted 'YYYY-MM'.             |

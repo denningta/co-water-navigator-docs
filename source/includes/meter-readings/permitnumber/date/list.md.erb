@@ -1,0 +1,47 @@
+## Get a Meter Reading
+
+```shell
+curl "https://cowaternavigator/api/meter-readings/FP-63209/2022-06" \
+  -H "Authorization: token"
+```
+
+```javascript
+const axios = require("axios");
+
+axios
+  .get("https://cowaternavigator/api/meter-readings/FP-63209/2022-06")
+  .then((response) => {
+    // handle success
+    console.log(response);
+  })
+  .catch((error) => {
+    // handle error
+    console.log(error);
+  });
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "date": "2022-06",
+  "permitNumber": "FP-63209",
+  "flowMeter": {
+    "value": 150
+  }
+  // etc...
+}
+```
+
+This endpoint retrieves a specific meter reading.
+
+### HTTP Request
+
+`GET /api/meter-readings/{permitNumber}/{date}`
+
+### URL Parameters
+
+| Parameter    | Required | Description                               |
+| ------------ | -------- | ----------------------------------------- |
+| permitNumber | true     | A string matching the well permit number. |
+| date         | true     | A string formatted 'YYYY-MM'.             |

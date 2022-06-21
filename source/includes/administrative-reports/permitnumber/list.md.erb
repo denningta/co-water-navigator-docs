@@ -1,0 +1,52 @@
+## List Administrative Reports
+
+```shell
+curl "https://cowaternavigator/api/administrative-reports/63209-FP"
+```
+
+```javascript
+const kittn = require("kittn");
+
+let api = kittn.authorize("meowmeowmeow");
+let kittens = api.kittens.get();
+```
+
+> Successful deletion will return the deleted records in JSON:
+
+```json
+[
+  {
+    "date": "2021-01",
+    "permitNumber": "FP-63209"
+  },
+  {
+    "date": "2021-02",
+    "permitNumber": "FP-63209"
+  },
+  {
+    "date": "2022-01",
+    "permitNumber": "FP-63209"
+  }
+  // ...etc
+]
+```
+
+This endpoint retrieves administrative reports associated with a permit number.
+
+This data corresponds to the DBB-013 Administrative Reporting form.
+
+### HTTP Request
+
+`GET /api/administrative-reports/{permitNumber}`
+
+### URL Parameters
+
+| Parameter    | Required | Description                               |
+| ------------ | -------- | ----------------------------------------- |
+| permitNumber | true     | A string matching the well permit number. |
+
+### Query Parameters
+
+| Parameter | Required | Description                                          |
+| --------- | -------- | ---------------------------------------------------- |
+| year      | false    | Define a year to retrieve all records for that year. |

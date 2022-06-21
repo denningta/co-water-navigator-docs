@@ -1,0 +1,7 @@
+| Property           | Type   | Restrictions | Description                                                                                                     |
+| ------------------ | ------ | ------------ | --------------------------------------------------------------------------------------------------------------- |
+| value              | number | Required     | The current value of the calculated field                                                                       |
+| shouldBe           | number | Read only    | The calculated value of the field. Calculations are performed by the API based on the DBB-004 and DBB-013 forms |
+| calculationState   | string | Read only    | Possible values: "success", "warning", "error"                                                                  |
+| calculationMessage | string | Read only    | A string declaring the expected value and describes how the expected value was calculated.                      |
+| source             | string | Read only    | Possible values: "user", "calculation".                                                                         |

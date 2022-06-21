@@ -1,0 +1,50 @@
+## List Meter Readings
+
+```shell
+curl "https://cowaternavigator/api/meter-readings/FP-63209?year=2021&year=2022"
+```
+
+```javascript
+const kittn = require("kittn");
+
+let api = kittn.authorize("meowmeowmeow");
+let kittens = api.kittens.get();
+```
+
+> Successful deletion will return the deleted records in JSON:
+
+```json
+[
+  {
+    "date": "2021-01",
+    "permitNumber": "FP-63209"
+  },
+  {
+    "date": "2021-02",
+    "permitNumber": "FP-63209"
+  },
+  {
+    "date": "2022-01",
+    "permitNumber": "FP-63209"
+  }
+  ...etc
+]
+```
+
+This endpoint retrieves all meter readings for a permit number.
+
+### HTTP Request
+
+`GET /api/meter-readings/{permitNumber}`
+
+### URL Parameters
+
+| Parameter    | Required | Description                               |
+| ------------ | -------- | ----------------------------------------- |
+| permitNumber | true     | A string matching the well permit number. |
+
+### Query Parameters
+
+| Parameter | Required | Description                                          |
+| --------- | -------- | ---------------------------------------------------- |
+| year      | false    | Define a year to retrieve all records for that year. |

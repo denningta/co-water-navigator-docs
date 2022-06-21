@@ -1,0 +1,75 @@
+## Create Administrative Report
+
+> Here we are creating two new records, one with a flowMeter value and one with a powerMeter value.
+
+```shell
+curl -X POST "https://cowaternavigator/api/administrative-reports/FP-63209" \
+  -d \
+  [ \
+    { \
+      "date": "2021-01", \
+      "flowMeter": { \
+        "value": 200 \
+      } \
+    }, \
+    { \
+      "date": "2021-02", \
+      "powerMeter": { \
+        "value": 500 \
+      } \
+    } \
+  ]
+```
+
+```javascript
+const kittn = require("kittn");
+
+let api = kittn.authorize("meowmeowmeow");
+let kittens = api.kittens.get();
+```
+
+> Successful creation will return the records in JSON.
+
+```json
+[
+  {
+    "date": "2021-01",
+    "permitNumber": "FP-63209",
+    "flowMeter": {
+      "value": 200
+    }
+  },
+  {
+    "date": "2021-02",
+    "permitNumber": "FP-63209",
+    "powerMeter": {
+      "value": 500
+    }
+  }
+]
+```
+
+This endpoint creates new a new administrative report
+
+The records to be created should be sent in the body of the request.
+
+<aside class="notice">
+  Each record is required to have a permit number and date.  A missing permit number or date in any record will result in an error.
+</aside>
+
+If a record already exists that matches any permitNumber and date of the request body - a "400 BadRequest" error will be returned.
+
+### HTTP Request
+
+`POST /api/administrative-reports/{permitNumber}/{year}`
+
+### URL Paramater
+
+| Property     | Type   | Restrictions | Description                                         |
+| ------------ | ------ | ------------ | --------------------------------------------------- |
+| permitNumber | string | required     | The well permit number identifying the well.        |
+| year         | string | required     | The year corresponding to the administrative report |
+
+### Body Properties
+
+<%= partial "includes/administrative-reports/properties/administrative-report-properties.md.erb" %>
