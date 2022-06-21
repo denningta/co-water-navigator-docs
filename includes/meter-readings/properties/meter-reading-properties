@@ -1,0 +1,87 @@
+<table><thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>date</td>
+<td>string</td>
+<td>Required</td>
+<td>The date in format &#39;YYYY-MM&#39; identifying the date the meter reading was taken</td>
+</tr>
+<tr>
+<td>permitNumber</td>
+<td>string</td>
+<td>Required</td>
+<td>The well permit number identifying the well.</td>
+</tr>
+<tr>
+<td>flowMeter</td>
+<td><a href="#calculated-value-fields">CalculatedValue</a></td>
+<td>Optional</td>
+<td>An object representing the value and metadata associated with the flow meter reading. Units in acre-feet.</td>
+</tr>
+<tr>
+<td>powerMeter</td>
+<td><a href="#calculated-value-fields">CalculatedValue</a></td>
+<td>Optional</td>
+<td>An object representing the value and metadata associated with the power meter reading. Units in kWh.</td>
+</tr>
+<tr>
+<td>powerConsumptionCoef</td>
+<td><a href="#calculated-value-fields">CalculatedValue</a></td>
+<td>Optional</td>
+<td>An object representing the value and metadata associated with the power consumption coefficient reading.</td>
+</tr>
+<tr>
+<td>pumpedThisPeriod</td>
+<td><a href="#calculated-value-fields">CalculatedValue</a></td>
+<td>Optional</td>
+<td>An object representing the value and metadata associated with the water pumped during the period of this record.</td>
+</tr>
+<tr>
+<td>availableThisYear</td>
+<td><a href="#calculated-value-fields">CalculatedValue</a></td>
+<td>Optional</td>
+<td>An object representing the value and metadata associated with the water available to be pumped during the year of this record.</td>
+</tr>
+<tr>
+<td>readBy</td>
+<td>string</td>
+<td>Optional</td>
+<td>The two character initial of the individual who performed the reading</td>
+</tr>
+<tr>
+<td>comments</td>
+<td>string</td>
+<td>Optional</td>
+<td>Comments related to this well reading. Typically used to denote co-mingled wells or a flow meter replacement</td>
+</tr>
+<tr>
+<td>createdAt</td>
+<td>string</td>
+<td>Read only</td>
+<td>An ISO Date/Time string automatically populated when the record is created</td>
+</tr>
+<tr>
+<td>createdBy</td>
+<td>UserData</td>
+<td>Read only</td>
+<td>Identity of the user who created the record</td>
+</tr>
+<tr>
+<td>updatedAt</td>
+<td>string</td>
+<td>Read only</td>
+<td>An ISO Date/Time string automaticlly populated when the record is updated</td>
+</tr>
+<tr>
+<td>updatedBy</td>
+<td>UserData</td>
+<td>Read only</td>
+<td>Identity of the user who updated the record</td>
+</tr>
+</tbody></table>

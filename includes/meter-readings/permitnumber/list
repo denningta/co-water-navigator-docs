@@ -1,0 +1,56 @@
+<h2 id='list-meter-readings'>List Meter Readings</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://cowaternavigator/api/meter-readings/FP-63209?year=2021&amp;year=2022"</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">kittn</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">"</span><span class="s2">meowmeowmeow</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
+</code></pre></div>
+<blockquote>
+<p>Successful deletion will return the deleted records in JSON:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-01"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"permitNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FP-63209"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-02"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"permitNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FP-63209"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-01"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"permitNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FP-63209"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+  </span><span class="err">...etc</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves all meter readings for a permit number.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET /api/meter-readings/{permitNumber}</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>permitNumber</td>
+<td>true</td>
+<td>A string matching the well permit number.</td>
+</tr>
+</tbody></table>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>year</td>
+<td>false</td>
+<td>Define a year to retrieve all records for that year.</td>
+</tr>
+</tbody></table>

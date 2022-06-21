@@ -1,0 +1,39 @@
+<table><thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>value</td>
+<td>number</td>
+<td>Required</td>
+<td>The current value of the calculated field</td>
+</tr>
+<tr>
+<td>shouldBe</td>
+<td>number</td>
+<td>Read only</td>
+<td>The calculated value of the field. Calculations are performed by the API based on the DBB-004 and DBB-013 forms</td>
+</tr>
+<tr>
+<td>calculationState</td>
+<td>string</td>
+<td>Read only</td>
+<td>Possible values: &quot;success&quot;, &quot;warning&quot;, &quot;error&quot;</td>
+</tr>
+<tr>
+<td>calculationMessage</td>
+<td>string</td>
+<td>Read only</td>
+<td>A string declaring the expected value and describes how the expected value was calculated.</td>
+</tr>
+<tr>
+<td>source</td>
+<td>string</td>
+<td>Read only</td>
+<td>Possible values: &quot;user&quot;, &quot;calculation&quot;.</td>
+</tr>
+</tbody></table>

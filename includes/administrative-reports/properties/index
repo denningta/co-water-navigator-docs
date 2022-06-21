@@ -1,0 +1,142 @@
+<h2 id='administrative-report-properties'>Administrative Report Properties</h2>
+<p>The administrative report fields represent the data from the DBB-013 Administrative Reporting form.</p>
+<h3 id='administrative-report-properties-2'>Administrative Report Properties</h3>
+<table><thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>calendarYear</td>
+<td>number</td>
+<td>required</td>
+<td>The calendar year associated with the administrative report</td>
+</tr>
+<tr>
+<td>originalAppropriation</td>
+<td>number</td>
+<td>optional</td>
+<td>Line 1</td>
+</tr>
+<tr>
+<td>allowedAppropriation</td>
+<td>number</td>
+<td>optional</td>
+<td>Line 2</td>
+</tr>
+<tr>
+<td>line3</td>
+<td>number</td>
+<td>optional</td>
+<td>Line 3</td>
+</tr>
+<tr>
+<td>maxBankingReserve</td>
+<td>number</td>
+<td>optional</td>
+<td>Line 4</td>
+</tr>
+<tr>
+<td>bankingReserveLastYear</td>
+<td>number</td>
+<td>optional</td>
+<td>Line 5</td>
+</tr>
+<tr>
+<td>pumpingLimitThisYear</td>
+<td>number</td>
+<td>optional</td>
+<td>Line 6</td>
+</tr>
+<tr>
+<td>line6Option</td>
+<td>&quot;a&quot; or &quot;b&quot;</td>
+<td>optional</td>
+<td></td>
+</tr>
+<tr>
+<td>totalPumpedThisYear</td>
+<td>number</td>
+<td>optional</td>
+<td>Line 7</td>
+</tr>
+<tr>
+<td>changeInBankingReserveThisYear</td>
+<td>number</td>
+<td>optional</td>
+<td>Line 8</td>
+</tr>
+<tr>
+<td>bankingReserveThisYear</td>
+<td>number</td>
+<td>optional</td>
+<td>Line 9</td>
+</tr>
+<tr>
+<td>line10</td>
+<td>number</td>
+<td>optional</td>
+<td>Line 10</td>
+</tr>
+<tr>
+<td>pumpingLimitNextYear</td>
+<td>number</td>
+<td>optional</td>
+<td>Line 11</td>
+</tr>
+<tr>
+<td>dateTimeCreated</td>
+<td>Date</td>
+<td>read-only</td>
+<td></td>
+</tr>
+<tr>
+<td>wellUsageData</td>
+<td><a href="#well-usage-fields">WellUsage</a></td>
+<td>optional</td>
+<td>An object describing the well usage conditions</td>
+</tr>
+</tbody></table>
+<h3 id='well-usage-properties'>Well Usage Properties</h3>
+<table><thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>changeOfUse</td>
+<td>boolean</td>
+<td>optional</td>
+<td>Set to true if the administrative report corresponds to a calendar year when the well has undergone a change of use</td>
+</tr>
+<tr>
+<td>comingledWells</td>
+<td>boolean</td>
+<td>optional</td>
+<td></td>
+</tr>
+<tr>
+<td>expandedAcres</td>
+<td>boolean</td>
+<td>optional</td>
+<td></td>
+</tr>
+<tr>
+<td>other</td>
+<td>boolean</td>
+<td>optional</td>
+<td></td>
+</tr>
+<tr>
+<td>comment</td>
+<td>string</td>
+<td>optional</td>
+<td></td>
+</tr>
+</tbody></table>
