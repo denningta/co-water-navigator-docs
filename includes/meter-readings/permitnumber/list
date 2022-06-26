@@ -1,8 +1,27 @@
-<h2 id='list-meter-readings'>List Meter Readings</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://cowaternavigator/api/meter-readings/FP-63209?year=2021&amp;year=2022"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">kittn</span><span class="dl">"</span><span class="p">);</span>
+<h2 id='list-meter-readings'>List Meter Readings</h2>
+<blockquote>
+<p>Send a get request to the meter-readings endpoint with optional query parameters:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://cowater.app/api/meter-readings?permit=FP-63209&amp;year=2021&amp;year=2022"</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">axios</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">axios</span><span class="dl">"</span><span class="p">);</span>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">"</span><span class="s2">meowmeowmeow</span><span class="dl">"</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
+<span class="kd">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">method</span><span class="p">:</span> <span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://cowater.app/api/meter-readings</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">params</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">permit</span><span class="p">:</span> <span class="dl">"</span><span class="s2">63209-FP</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">year</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">2021</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">2022</span><span class="dl">"</span><span class="p">],</span>
+  <span class="p">},</span>
+<span class="p">};</span>
+
+<span class="nx">axios</span>
+  <span class="p">.</span><span class="nx">request</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+  <span class="p">});</span>
 </code></pre></div>
 <blockquote>
 <p>Successful deletion will return the deleted records in JSON:</p>
@@ -11,46 +30,49 @@
   </span><span class="p">{</span><span class="w">
     </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-01"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"permitNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FP-63209"</span><span class="w">
+    </span><span class="err">//</span><span class="w"> </span><span class="err">etc...</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-02"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"permitNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FP-63209"</span><span class="w">
+    </span><span class="err">//</span><span class="w"> </span><span class="err">etc...</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-01"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"permitNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FP-63209"</span><span class="w">
+    </span><span class="err">//</span><span class="w"> </span><span class="err">etc...</span><span class="w">
   </span><span class="p">}</span><span class="w">
-  </span><span class="err">...etc</span><span class="w">
+  </span><span class="err">//</span><span class="w"> </span><span class="err">etc...</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div>
-<p>This endpoint retrieves all meter readings for a permit number.</p>
+<p>This endpoint retrieves meter readings for a permit number.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET /api/meter-readings/{permitNumber}</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
+<p><code>GET /api/meter-readings</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Required</th>
+<th>Type</th>
+<th>Restrictions</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>permitNumber</td>
-<td>true</td>
+<td>string</td>
+<td>optional</td>
 <td>A string matching the well permit number.</td>
 </tr>
-</tbody></table>
-<h3 id='query-parameters'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
 <tr>
 <td>year</td>
-<td>false</td>
-<td>Define a year to retrieve all records for that year.</td>
+<td>string</td>
+<td>optional</td>
+<td>A string matching the calandar year of well permits.</td>
+</tr>
+<tr>
+<td>date</td>
+<td>string</td>
+<td>optional</td>
+<td>A string formatted &#39;YYYY-MM&#39;.</td>
 </tr>
 </tbody></table>

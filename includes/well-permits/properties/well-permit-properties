@@ -1,0 +1,387 @@
+<table><thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>permit</td>
+<td>string</td>
+<td>required</td>
+<td>Well permit number</td>
+</tr>
+<tr>
+<td>receipt</td>
+<td>string</td>
+<td>required</td>
+<td>Permit application receipt number</td>
+</tr>
+<tr>
+<td>contactName</td>
+<td>string</td>
+<td>required</td>
+<td>Contact Name</td>
+</tr>
+<tr>
+<td>asBuiltAquifers</td>
+<td>string</td>
+<td>optional</td>
+<td>As Built Aquifers</td>
+</tr>
+<tr>
+<td>associatedAquifers</td>
+<td>string</td>
+<td>optional</td>
+<td>Associated Aquifers</td>
+</tr>
+<tr>
+<td>associatedCaseNumbers</td>
+<td>string</td>
+<td>optional</td>
+<td>Water court case number(s) associated with water right</td>
+</tr>
+<tr>
+<td>associatedUses</td>
+<td>string</td>
+<td>optional</td>
+<td>Associated Uses</td>
+</tr>
+<tr>
+<td>bottomPerforatedCasing</td>
+<td>number</td>
+<td>optional</td>
+<td>Depth from surface to bottom of perforated casing (feet)</td>
+</tr>
+<tr>
+<td>contactAddress</td>
+<td>string</td>
+<td>optional</td>
+<td>Contact Address</td>
+</tr>
+<tr>
+<td>contactCity</td>
+<td>string</td>
+<td>optional</td>
+<td>Contact City</td>
+</tr>
+<tr>
+<td>contactPostalCode</td>
+<td>string</td>
+<td>optional</td>
+<td>Contact Postal Code</td>
+</tr>
+<tr>
+<td>contactStateOrProvince</td>
+<td>string</td>
+<td>optional</td>
+<td>Contact State Or Province</td>
+</tr>
+<tr>
+<td>contactType</td>
+<td>string</td>
+<td>optional</td>
+<td>Contact Type</td>
+</tr>
+<tr>
+<td>coordsEw</td>
+<td>number</td>
+<td>optional</td>
+<td>Distance and direction from East/West section line (feet)</td>
+</tr>
+<tr>
+<td>coordsEwDir</td>
+<td>string</td>
+<td>optional</td>
+<td>Direction of measurement from East/West section line</td>
+</tr>
+<tr>
+<td>coordsNs</td>
+<td>number</td>
+<td>optional</td>
+<td>Distance and direction from North/South section line (feet)</td>
+</tr>
+<tr>
+<td>coordsNsDir</td>
+<td>string</td>
+<td>optional</td>
+<td>Direction of measurement from North/South section line</td>
+</tr>
+<tr>
+<td>county</td>
+<td>string</td>
+<td>optional</td>
+<td>County where the well is located</td>
+</tr>
+<tr>
+<td>date1stBeneficialUse</td>
+<td>Date</td>
+<td>optional</td>
+<td>Date of First Beneficial Use</td>
+</tr>
+<tr>
+<td>dateApplicationReceived</td>
+<td>Date</td>
+<td>optional</td>
+<td>Date Application Received</td>
+</tr>
+<tr>
+<td>datePermitExpires</td>
+<td>Date</td>
+<td>optional</td>
+<td>Date Permit Expires</td>
+</tr>
+<tr>
+<td>datePermitIssued</td>
+<td>Date</td>
+<td>optional</td>
+<td>Date Permit Issued</td>
+</tr>
+<tr>
+<td>datePumpInstalled</td>
+<td>Date</td>
+<td>optional</td>
+<td>Date Pump Installed</td>
+</tr>
+<tr>
+<td>dateWellCompleted</td>
+<td>Date</td>
+<td>optional</td>
+<td>Date Well Completed</td>
+</tr>
+<tr>
+<td>dateWellPlugged</td>
+<td>Date</td>
+<td>optional</td>
+<td>Date Well Plugged</td>
+</tr>
+<tr>
+<td>denverBasinAquifer</td>
+<td>string</td>
+<td>optional</td>
+<td>Denver Basin Aquifer</td>
+</tr>
+<tr>
+<td>depthTotal</td>
+<td>number</td>
+<td>optional</td>
+<td>Depth Total (ft)</td>
+</tr>
+<tr>
+<td>designatedBasinName</td>
+<td>string</td>
+<td>optional</td>
+<td>Eight established geographic areas in Colorado&#39;s Eastern Plains where users rely primarily on groundwater for water supply</td>
+</tr>
+<tr>
+<td>division</td>
+<td>number</td>
+<td>optional</td>
+<td>DWR Water Division</td>
+</tr>
+<tr>
+<td>driller</td>
+<td>string</td>
+<td>optional</td>
+<td>Driller</td>
+</tr>
+<tr>
+<td>drillerLic</td>
+<td>string</td>
+<td>optional</td>
+<td>Driller License</td>
+</tr>
+<tr>
+<td>elevation</td>
+<td>number</td>
+<td>optional</td>
+<td>Elevation (ft)</td>
+</tr>
+<tr>
+<td>latitude</td>
+<td>number</td>
+<td>optional</td>
+<td>Latitude value in decimal degrees</td>
+</tr>
+<tr>
+<td>locationAccuracy</td>
+<td>string</td>
+<td>optional</td>
+<td>Accuracy of location coordinates</td>
+</tr>
+<tr>
+<td>locationType</td>
+<td>string</td>
+<td>optional</td>
+<td>Location Type</td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>number</td>
+<td>optional</td>
+<td>Longitude (decimal degrees)</td>
+</tr>
+<tr>
+<td>managementDistrictName</td>
+<td>string</td>
+<td>optional</td>
+<td>Thirteen local districts, within the Designated Basins, with additional administrative authority</td>
+</tr>
+<tr>
+<td>modified</td>
+<td>Date</td>
+<td>optional</td>
+<td>Last date time that this record was modified in the DWR database</td>
+</tr>
+<tr>
+<td>moreInformation</td>
+<td>string</td>
+<td>optional</td>
+<td>Hyperlink to additional details</td>
+</tr>
+<tr>
+<td>parcelName</td>
+<td>string</td>
+<td>optional</td>
+<td>Parcel Name</td>
+</tr>
+<tr>
+<td>permitCategoryDescr</td>
+<td>string</td>
+<td>optional</td>
+<td>Permit Category Description</td>
+</tr>
+<tr>
+<td>permitCurrentStatusDescr</td>
+<td>string</td>
+<td>optional</td>
+<td>Permit Current Status Description</td>
+</tr>
+<tr>
+<td>physicalAddress</td>
+<td>string</td>
+<td>optional</td>
+<td>Physical Address</td>
+</tr>
+<tr>
+<td>physicalCity</td>
+<td>string</td>
+<td>optional</td>
+<td>Physical City</td>
+</tr>
+<tr>
+<td>physicalPostalCode</td>
+<td>string</td>
+<td>optional</td>
+<td>Physical Postal Code</td>
+</tr>
+<tr>
+<td>physicalStateOrProvince</td>
+<td>string</td>
+<td>optional</td>
+<td>Physical State Or Province</td>
+</tr>
+<tr>
+<td>pm</td>
+<td>string</td>
+<td>optional</td>
+<td>Principal Meridian of well’s legal location - there are 5 principal meridians in CO: Sixth (S), New Mexico (N), Baca (B), Costilla (C), and Ute (U)</td>
+</tr>
+<tr>
+<td>pumpInstaller</td>
+<td>string</td>
+<td>optional</td>
+<td>Pump Installer</td>
+</tr>
+<tr>
+<td>pumpLic</td>
+<td>string</td>
+<td>optional</td>
+<td>Pump License</td>
+</tr>
+<tr>
+<td>pumpTestYield</td>
+<td>number</td>
+<td>optional</td>
+<td>Pump Test Yield</td>
+</tr>
+<tr>
+<td>q10</td>
+<td>string</td>
+<td>optional</td>
+<td>Legal location: 10 acre quarter section</td>
+</tr>
+<tr>
+<td>q160</td>
+<td>string</td>
+<td>optional</td>
+<td>Legal location: 160 acre quarter section</td>
+</tr>
+<tr>
+<td>q40</td>
+<td>string</td>
+<td>optional</td>
+<td>Legal location: 40 acre quarter section</td>
+</tr>
+<tr>
+<td>range</td>
+<td>string</td>
+<td>optional</td>
+<td>Legal location: A number in the format “nnnd” where “nnn” is the range number and “d” is the direction either East or West</td>
+</tr>
+<tr>
+<td>section</td>
+<td>string</td>
+<td>optional</td>
+<td>Section number - township, range divided into 36 one square mile sections; “U” indicates location in Ute Correction (Division 7 only)</td>
+</tr>
+<tr>
+<td>staticWaterLevel</td>
+<td>number</td>
+<td>optional</td>
+<td>Static Water Level (ft)</td>
+</tr>
+<tr>
+<td>staticWaterLevelDate</td>
+<td>Date</td>
+<td>optional</td>
+<td>Static Water Level Date</td>
+</tr>
+<tr>
+<td>topPerforatedCasing</td>
+<td>number</td>
+<td>optional</td>
+<td>Depth from surface to top of perforated casing (feet)</td>
+</tr>
+<tr>
+<td>township</td>
+<td>string</td>
+<td>optional</td>
+<td>Legal location: Township number and direction</td>
+</tr>
+<tr>
+<td>utmX</td>
+<td>number</td>
+<td>optional</td>
+<td>The x (Easting) component of the Universal Transverse Mercator system. (Zone 13, NAD83 datum)</td>
+</tr>
+<tr>
+<td>utmY</td>
+<td>number</td>
+<td>optional</td>
+<td>The y (Northing) component of the Universal Transverse Mercator system. (Zone 13, NAD83 datum)</td>
+</tr>
+<tr>
+<td>waterDistrict</td>
+<td>number</td>
+<td>optional</td>
+<td>DWR Water District</td>
+</tr>
+<tr>
+<td>wdid</td>
+<td>string</td>
+<td>optional</td>
+<td>DWR unique structure identifier</td>
+</tr>
+</tbody></table>

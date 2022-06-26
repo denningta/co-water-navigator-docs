@@ -24,6 +24,7 @@
   <span class="nl">value</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
   <span class="nl">shouldBe</span><span class="p">:</span> <span class="kr">number</span> <span class="o">|</span> <span class="kc">undefined</span><span class="p">;</span>
   <span class="nl">calculationState</span><span class="p">:</span> <span class="dl">"</span><span class="s2">success</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">warning</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">error</span><span class="dl">"</span> <span class="o">|</span> <span class="kc">undefined</span><span class="p">;</span>
+  <span class="nl">calculationMessage</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
   <span class="nl">source</span><span class="p">:</span> <span class="dl">"</span><span class="s2">user</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">calculation</span><span class="dl">"</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -46,8 +47,9 @@
     </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"acreFeetPumpedYTD"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"calculationShouldBe"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"calculationState"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"calculationShouldBe"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10.00"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"calculationState"</span><span class="p">:</span><span class="w"> </span><span class="s2">"warning"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"calculationMessage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Warning: Expected 10.00"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calculation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="w">
   </span><span class="p">},</span><span class="w">
@@ -60,16 +62,22 @@
   </span><span class="nl">"dateTimeCreated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mon, 31 Jan 2022 15:12:18 GMT"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"dateTimeUpdated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Thu, 09 Jun 2022 15:02:11 GMT"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"flowMeter"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"calculationShouldBe"</span><span class="p">:</span><span class="w"> </span><span class="s2">"399.63"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"calculationState"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"399.63"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"permitNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"31643-FP"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"powerConsumptionCoef"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"calculationState"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"calculationShouldBe"</span><span class="p">:</span><span class="w"> </span><span class="s2">"285.36"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"285.36"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"powerMeter"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"calculationState"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"calculationShouldBe"</span><span class="p">:</span><span class="w"> </span><span class="s2">"40536.00"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"40536.00"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"readBy"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GT"</span><span class="p">,</span><span class="w">
@@ -91,79 +99,79 @@
 <tr>
 <td>date</td>
 <td>string</td>
-<td>Required</td>
+<td>required</td>
 <td>The date in format &#39;YYYY-MM&#39; identifying the date the meter reading was taken</td>
 </tr>
 <tr>
 <td>permitNumber</td>
 <td>string</td>
-<td>Required</td>
+<td>required</td>
 <td>The well permit number identifying the well.</td>
 </tr>
 <tr>
 <td>flowMeter</td>
-<td><a href="#calculated-value-fields">CalculatedValue</a></td>
-<td>Optional</td>
+<td><a href="#calculated-value-properties">CalculatedValue</a></td>
+<td>optional</td>
 <td>An object representing the value and metadata associated with the flow meter reading. Units in acre-feet.</td>
 </tr>
 <tr>
 <td>powerMeter</td>
-<td><a href="#calculated-value-fields">CalculatedValue</a></td>
-<td>Optional</td>
+<td><a href="#calculated-value-properties">CalculatedValue</a></td>
+<td>optional</td>
 <td>An object representing the value and metadata associated with the power meter reading. Units in kWh.</td>
 </tr>
 <tr>
 <td>powerConsumptionCoef</td>
-<td><a href="#calculated-value-fields">CalculatedValue</a></td>
-<td>Optional</td>
+<td><a href="#calculated-value-properties">CalculatedValue</a></td>
+<td>optional</td>
 <td>An object representing the value and metadata associated with the power consumption coefficient reading.</td>
 </tr>
 <tr>
 <td>pumpedThisPeriod</td>
-<td><a href="#calculated-value-fields">CalculatedValue</a></td>
-<td>Optional</td>
+<td><a href="#calculated-value-properties">CalculatedValue</a></td>
+<td>optional</td>
 <td>An object representing the value and metadata associated with the water pumped during the period of this record.</td>
 </tr>
 <tr>
 <td>availableThisYear</td>
-<td><a href="#calculated-value-fields">CalculatedValue</a></td>
-<td>Optional</td>
+<td><a href="#calculated-value-properties">CalculatedValue</a></td>
+<td>optional</td>
 <td>An object representing the value and metadata associated with the water available to be pumped during the year of this record.</td>
 </tr>
 <tr>
 <td>readBy</td>
 <td>string</td>
-<td>Optional</td>
+<td>optional</td>
 <td>The two character initial of the individual who performed the reading</td>
 </tr>
 <tr>
 <td>comments</td>
 <td>string</td>
-<td>Optional</td>
+<td>optional</td>
 <td>Comments related to this well reading. Typically used to denote co-mingled wells or a flow meter replacement</td>
 </tr>
 <tr>
 <td>createdAt</td>
 <td>string</td>
-<td>Read only</td>
+<td>read only</td>
 <td>An ISO Date/Time string automatically populated when the record is created</td>
 </tr>
 <tr>
 <td>createdBy</td>
 <td>UserData</td>
-<td>Read only</td>
+<td>read only</td>
 <td>Identity of the user who created the record</td>
 </tr>
 <tr>
 <td>updatedAt</td>
 <td>string</td>
-<td>Read only</td>
+<td>read only</td>
 <td>An ISO Date/Time string automaticlly populated when the record is updated</td>
 </tr>
 <tr>
 <td>updatedBy</td>
 <td>UserData</td>
-<td>Read only</td>
+<td>read only</td>
 <td>Identity of the user who updated the record</td>
 </tr>
 </tbody></table>
@@ -209,11 +217,30 @@
 </tbody></table>
 
 
-<h2 id='list-meter-readings'>List Meter Readings</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://cowaternavigator/api/meter-readings/FP-63209?year=2021&amp;year=2022"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">kittn</span><span class="dl">"</span><span class="p">);</span>
+<h2 id='list-meter-readings'>List Meter Readings</h2>
+<blockquote>
+<p>Send a get request to the meter-readings endpoint with optional query parameters:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://cowater.app/api/meter-readings?permit=FP-63209&amp;year=2021&amp;year=2022"</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">axios</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">axios</span><span class="dl">"</span><span class="p">);</span>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">"</span><span class="s2">meowmeowmeow</span><span class="dl">"</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
+<span class="kd">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">method</span><span class="p">:</span> <span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://cowater.app/api/meter-readings</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">params</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">permit</span><span class="p">:</span> <span class="dl">"</span><span class="s2">63209-FP</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">year</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">2021</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">2022</span><span class="dl">"</span><span class="p">],</span>
+  <span class="p">},</span>
+<span class="p">};</span>
+
+<span class="nx">axios</span>
+  <span class="p">.</span><span class="nx">request</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+  <span class="p">});</span>
 </code></pre></div>
 
 <blockquote>
@@ -224,70 +251,85 @@
   </span><span class="p">{</span><span class="w">
     </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-01"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"permitNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FP-63209"</span><span class="w">
+    </span><span class="err">//</span><span class="w"> </span><span class="err">etc...</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-02"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"permitNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FP-63209"</span><span class="w">
+    </span><span class="err">//</span><span class="w"> </span><span class="err">etc...</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-01"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"permitNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FP-63209"</span><span class="w">
+    </span><span class="err">//</span><span class="w"> </span><span class="err">etc...</span><span class="w">
   </span><span class="p">}</span><span class="w">
-  </span><span class="err">...etc</span><span class="w">
+  </span><span class="err">//</span><span class="w"> </span><span class="err">etc...</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div>
 
-<p>This endpoint retrieves all meter readings for a permit number.</p>
+<p>This endpoint retrieves meter readings for a permit number.</p>
 
 <h3 id='http-request'>HTTP Request</h3>
 
-<p><code>GET /api/meter-readings/{permitNumber}</code></p>
-
-<h3 id='url-parameters'>URL Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>permitNumber</td>
-<td>true</td>
-<td>A string matching the well permit number.</td>
-</tr>
-</tbody></table>
+<p><code>GET /api/meter-readings</code></p>
 
 <h3 id='query-parameters'>Query Parameters</h3>
 
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Required</th>
+<th>Type</th>
+<th>Restrictions</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
+<td>permitNumber</td>
+<td>string</td>
+<td>optional</td>
+<td>A string matching the well permit number.</td>
+</tr>
+<tr>
 <td>year</td>
-<td>false</td>
-<td>Define a year to retrieve all records for that year.</td>
+<td>string</td>
+<td>optional</td>
+<td>A string matching the calandar year of well permits.</td>
+</tr>
+<tr>
+<td>date</td>
+<td>string</td>
+<td>optional</td>
+<td>A string formatted &#39;YYYY-MM&#39;.</td>
 </tr>
 </tbody></table>
 
-<p><h2 id='get-a-meter-reading'>Get a Meter Reading</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">&quot;https://cowaternavigator/api/meter-readings/FP-63209/2022-06&quot;</span> <span class="se">&lt;/span&gt;
-  <span class="nt">-H</span> <span class="s2">&quot;Authorization: token&quot;</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">axios</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">&quot;</span><span class="s2">axios</span><span class="dl">&quot;</span><span class="p">);</span></p>
+<p><h2 id='create-a-meter-reading'>Create a Meter Reading</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">&quot;https://cowater.app/api/meter-readings/63209-FP/2022-06&quot;</span> <span class="se">\</span>
+  <span class="nt">-X</span> POST <span class="se">\</span>
+  <span class="nt">-d</span> <span class="o">{</span> <span class="se">\</span>
+      <span class="s2">&quot;flowMeter&quot;</span>: <span class="o">{</span> <span class="se">\</span>
+        <span class="s2">&quot;value&quot;</span>: <span class="s2">&quot;150&quot;</span> <span class="se">\</span>
+      <span class="o">}</span> <span class="se">\</span>
+    <span class="o">}</span></p>
+
+<p></code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">axios</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">&quot;</span><span class="s2">axios</span><span class="dl">&quot;</span><span class="p">);</span></p>
+
+<p><span class="kd">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">method</span><span class="p">:</span> <span class="dl">&quot;</span><span class="s2">POST</span><span class="dl">&quot;</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="dl">&quot;</span><span class="s2">https://cowater.app/api/meter-readings/63209-FP/2022-06</span><span class="dl">&quot;</span><span class="p">,</span>
+  <span class="na">data</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">flowMeter</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">value</span><span class="p">:</span> <span class="mi">150</span><span class="p">,</span>
+    <span class="p">},</span>
+  <span class="p">},</span>
+<span class="p">};</span></p>
 
 <p><span class="nx">axios</span>
-  <span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">&quot;</span><span class="s2">https://cowaternavigator/api/meter-readings/FP-63209/2022-06</span><span class="dl">&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">request</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="c1">// handle success</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
   <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="c1">// handle error</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
   <span class="p">});</span>
 </code></pre></div>
 <blockquote>
@@ -295,59 +337,19 @@
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-06&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nl">&quot;permitNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FP-63209&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nl">&quot;permitNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;63209-FP&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nl">&quot;flowMeter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="w">
+    </span><span class="nl">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;150&quot;</span><span class="w">
   </span><span class="p">}</span><span class="w">
-  </span><span class="err">//</span><span class="w"> </span><span class="err">etc...</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves a specific meter reading.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET /api/meter-readings/{permitNumber}/{date}</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>permitNumber</td>
-<td>true</td>
-<td>A string matching the well permit number.</td>
-</tr>
-<tr>
-<td>date</td>
-<td>true</td>
-<td>A string formatted &#39;YYYY-MM&#39;.</td>
-</tr>
-</tbody></table></p>
-
-<p><h2 id='create-a-meter-reading'>Create a Meter Reading</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> POST <span class="s2">&quot;https://cowaternavigator/api/meter-readings/FP-63209/2022-06&quot;</span> <span class="se">&lt;/span&gt;
-  <span class="nt">-d</span> <span class="o">{</span>
-      <span class="s2">&quot;date&quot;</span>: <span class="s2">&quot;2021-01&quot;</span>,
-      <span class="s2">&quot;permitNumber&quot;</span>: <span class="s2">&quot;FP-63209&quot;</span>
-    <span class="o">}</span></p>
-
-<p></code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">&quot;</span><span class="s2">kittn</span><span class="dl">&quot;</span><span class="p">);</span></p>
-
-<p><span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">&quot;</span><span class="s2">meowmeowmeow</span><span class="dl">&quot;</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-01&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nl">&quot;permitNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FP-63209&quot;</span><span class="w">
-  </span><span class="err">//</span><span class="w"> </span><span class="err">...etc</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 <p>This endpoint creates a new meter reading.</p></p>
 
-<p>The record to be created should be send in the body of the request.</p>
+<p>The record to be created should be sent in the body of the request.</p>
+
+<aside class="notice">
+  Successful creation of a meter reading will create meter readings for the other eleven months in the specified calendar year.  These records will be populated with date and permitNumber only.  
+</aside>
 
 <aside class="notice">
   If a record already exists that matches the permitNumber and date of the request body - a "400 BadRequest" error will be returned.
@@ -362,38 +364,65 @@
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Required</th>
+<th>Type</th>
+<th>Restrictions</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>permitNumber</td>
-<td>true</td>
+<td>string</td>
+<td>required</td>
 <td>A string matching the well permit number.</td>
 </tr>
 <tr>
 <td>date</td>
-<td>true</td>
+<td>string</td>
+<td>required</td>
 <td>A string formatted &#39;YYYY-MM&#39;.</td>
 </tr>
 </tbody></table>
 
-<p><h2 id='update-a-meter-reading'>Update a Meter Reading</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> PATCH <span class="s2">&quot;https://cowaternavigator/api/meter-readings/FP-63209/2022-06&quot;</span> <span class="se">&lt;/span&gt;
-  <span class="nt">-d</span> <span class="o">{</span> <span class="s2">&quot;flowMeter&quot;</span>: <span class="o">{</span> <span class="s2">&quot;value&quot;</span>: <span class="s2">&quot;150&quot;</span> <span class="o">}</span> <span class="o">}</span></p>
+<h3 id='body-properties'>Body Properties</h3>
 
-<p></code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">&quot;</span><span class="s2">kittn</span><span class="dl">&quot;</span><span class="p">);</span></p>
+<p>Expected structure of the body is described here: <a href="#meter-reading-properties">Meter Reading Properties</a></p>
 
-<p><span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">&quot;</span><span class="s2">meowmeowmeow</span><span class="dl">&quot;</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
+<aside class="notice">
+  If the permitNumber or date properties are specified in the body, they will be overwritten by the permitNumber and date properties specified in the url.  There is no need to specify these properties in the body.
+</aside>
+
+<p><h2 id='update-a-meter-reading'>Update a Meter Reading</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> PATCH <span class="s2">&quot;https://cowater.app/api/meter-readings/63209-FP/2022-06&quot;</span> <span class="se">\</span>
+  <span class="nt">-d</span> <span class="o">{</span> <span class="s2">&quot;flowMeter&quot;</span>: <span class="o">{</span> <span class="s2">&quot;value&quot;</span>: <span class="s2">&quot;200&quot;</span> <span class="o">}</span> <span class="o">}</span></p>
+
+<p></code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">axios</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">&quot;</span><span class="s2">axios</span><span class="dl">&quot;</span><span class="p">);</span></p>
+
+<p><span class="kd">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">method</span><span class="p">:</span> <span class="dl">&quot;</span><span class="s2">PATCH</span><span class="dl">&quot;</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="dl">&quot;</span><span class="s2">https://cowater.app/api/meter-readings/63209-FP/2022-06</span><span class="dl">&quot;</span><span class="p">,</span>
+  <span class="na">data</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">flowMeter</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">value</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="p">},</span>
+  <span class="p">},</span>
+<span class="p">};</span></p>
+
+<p><span class="nx">axios</span>
+  <span class="p">.</span><span class="nx">request</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+  <span class="p">});</span>
 </code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-01&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nl">&quot;permitNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FP-63209&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nl">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-06&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nl">&quot;permitNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;63209-FP&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nl">&quot;flowMeter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="w">
+    </span><span class="nl">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
   </span><span class="p">}</span><span class="w">
   </span><span class="err">//</span><span class="w"> </span><span class="err">...etc</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -408,45 +437,66 @@
 
 <h3 id='http-request'>HTTP Request</h3>
 
-<p><code>POST /api/meter-readings/{permitNumber}/{date}</code></p>
+<p><code>PATCH /api/meter-readings/{permitNumber}/{date}</code></p>
 
 <h3 id='url-parameters'>URL Parameters</h3>
 
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Required</th>
+<th>Type</th>
+<th>Restrictions</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>permitNumber</td>
-<td>true</td>
+<td>string</td>
+<td>required</td>
 <td>A string matching the well permit number.</td>
 </tr>
 <tr>
 <td>date</td>
-<td>true</td>
+<td>string</td>
+<td>required</td>
 <td>A string formatted &#39;YYYY-MM&#39;.</td>
 </tr>
 </tbody></table>
 
-<p><h2 id='delete-a-meter-reading'>Delete a Meter Reading</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">&quot;http://example.com/api/kittens/2&quot;</span> <span class="se">&lt;/span&gt;
-  <span class="nt">-X</span> DELETE <span class="se">&lt;/span&gt;
-  <span class="nt">-H</span> <span class="s2">&quot;Authorization: token&quot;</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">&quot;</span><span class="s2">kittn</span><span class="dl">&quot;</span><span class="p">);</span></p>
+<h3 id='body-properties'>Body Properties</h3>
 
-<p><span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">&quot;</span><span class="s2">meowmeowmeow</span><span class="dl">&quot;</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<p>Expected structure of the body is described here: <a href="#meter-reading-properties">Meter Reading Properties</a></p>
+
+<aside class="notice">
+  If the permitNumber or date properties are specified in the body, they will be overwritten by the permitNumber and date properties specified in the url.  There is no need to specify these properties in the body.
+</aside>
+
+<p><h2 id='delete-a-meter-reading'>Delete a Meter Reading</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">&quot;https://cowater.app/api/meter-readings/63209-FP/2022-06&quot;</span> <span class="se">\</span>
+  <span class="nt">-X</span> DELETE
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">axios</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">&quot;</span><span class="s2">axios</span><span class="dl">&quot;</span><span class="p">);</span></p>
+
+<p><span class="kd">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">method</span><span class="p">:</span> <span class="dl">&quot;</span><span class="s2">DELETE</span><span class="dl">&quot;</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="dl">&quot;</span><span class="s2">https://cowater.app/api/meter-readings/632090-FP/2022-06</span><span class="dl">&quot;</span><span class="p">,</span>
+<span class="p">};</span></p>
+
+<p><span class="nx">axios</span>
+  <span class="p">.</span><span class="nx">request</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+  <span class="p">});</span>
 </code></pre></div>
 <blockquote>
 <p>The above command returns the record deleted:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-02&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nl">&quot;permitNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FP-63209&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nl">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-06&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nl">&quot;permitNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;63209-FP&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nl">&quot;flowMeter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="w">
+    </span><span class="nl">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
@@ -457,18 +507,21 @@
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Required</th>
+<th>Type</th>
+<th>Restrictions</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>permitNumber</td>
-<td>true</td>
+<td>string</td>
+<td>required</td>
 <td>A string matching the well permit number.</td>
 </tr>
 <tr>
 <td>date</td>
-<td>true</td>
+<td>string</td>
+<td>required</td>
 <td>A string formatted &#39;YYYY-MM&#39;.</td>
 </tr>
 </tbody></table></p>

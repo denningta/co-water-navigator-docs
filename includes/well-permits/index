@@ -1,0 +1,813 @@
+<h1 id='well-permits'>Well Permits</h1>
+<h2 id='well-permit-properties'>Well Permit Properties</h2>
+
+<p>Below describes the well permit properties.</p>
+
+<h3 id='meter-reading-properties'>Meter Reading Properties</h3><div class="highlight"><pre class="highlight typescript"><code><span class="kr">interface</span> <span class="nx">WellPermit</span> <span class="p">{</span>
+  <span class="nl">asBuiltAquifers</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// As Built Aquifers</span>
+  <span class="nl">associatedAquifers</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Associated Aquifers</span>
+  <span class="nl">associatedCaseNumbers</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Water court case number(s) associated with water right</span>
+  <span class="nl">associatedUses</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Associated Uses</span>
+  <span class="nl">bottomPerforatedCasing</span><span class="p">?:</span> <span class="kr">number</span><span class="p">;</span> <span class="c1">// Depth from surface to bottom of perforated casing (feet)</span>
+  <span class="nl">contactAddress</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Contact Address</span>
+  <span class="nl">contactCity</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Contact City</span>
+  <span class="nl">contactName</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Contact Name</span>
+  <span class="nl">contactPostalCode</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Contact Postal Code</span>
+  <span class="nl">contactStateOrProvince</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Contact State Or Province</span>
+  <span class="nl">contactType</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Contact Type</span>
+  <span class="nl">coordsEw</span><span class="p">?:</span> <span class="kr">number</span><span class="p">;</span> <span class="c1">// Distance and direction from East/West section line (feet)</span>
+  <span class="nl">coordsEwDir</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Direction of measurement from East/West section line</span>
+  <span class="nl">coordsNs</span><span class="p">?:</span> <span class="kr">number</span><span class="p">;</span> <span class="c1">// Distance and direction from North/South section line (feet)</span>
+  <span class="nl">coordsNsDir</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Direction of measurement from North/South section line</span>
+  <span class="nl">county</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// County where the well is located</span>
+  <span class="nl">date1stBeneficialUse</span><span class="p">?:</span> <span class="nb">Date</span><span class="p">;</span> <span class="c1">// Date of First Beneficial Use</span>
+  <span class="nl">dateApplicationReceived</span><span class="p">?:</span> <span class="nb">Date</span><span class="p">;</span> <span class="c1">// Date Application Received</span>
+  <span class="nl">datePermitExpires</span><span class="p">?:</span> <span class="nb">Date</span><span class="p">;</span> <span class="c1">// Date Permit Expires</span>
+  <span class="nl">datePermitIssued</span><span class="p">?:</span> <span class="nb">Date</span><span class="p">;</span> <span class="c1">// Date Permit Issued</span>
+  <span class="nl">datePumpInstalled</span><span class="p">?:</span> <span class="nb">Date</span><span class="p">;</span> <span class="c1">// Date Pump Installed</span>
+  <span class="nl">dateWellCompleted</span><span class="p">?:</span> <span class="nb">Date</span><span class="p">;</span> <span class="c1">// Date Well Completed</span>
+  <span class="nl">dateWellPlugged</span><span class="p">?:</span> <span class="nb">Date</span><span class="p">;</span> <span class="c1">// Date Well Plugged</span>
+  <span class="nl">denverBasinAquifer</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Denver Basin Aquifer</span>
+  <span class="nl">depthTotal</span><span class="p">?:</span> <span class="kr">number</span><span class="p">;</span> <span class="c1">// Depth Total (ft)</span>
+  <span class="nl">designatedBasinName</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Eight established geographic areas in Colorado's Eastern Plains where users rely primarily on groundwater for water supply</span>
+  <span class="nl">division</span><span class="p">?:</span> <span class="kr">number</span><span class="p">;</span> <span class="c1">// DWR Water Division</span>
+  <span class="nl">driller</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Driller</span>
+  <span class="nl">drillerLic</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Driller License</span>
+  <span class="nl">elevation</span><span class="p">?:</span> <span class="kr">number</span><span class="p">;</span> <span class="c1">// Elevation (ft)</span>
+  <span class="nl">latitude</span><span class="p">?:</span> <span class="kr">number</span><span class="p">;</span> <span class="c1">// Latitude value in decimal degrees</span>
+  <span class="nl">locationAccuracy</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Accuracy of location coordinates</span>
+  <span class="nl">locationType</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Location Type</span>
+  <span class="nl">longitude</span><span class="p">?:</span> <span class="kr">number</span><span class="p">;</span> <span class="c1">// Longitude (decimal degrees)</span>
+  <span class="nl">managementDistrictName</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Thirteen local districts, within the Designated Basins, with additional administrative authority</span>
+  <span class="nl">modified</span><span class="p">?:</span> <span class="nb">Date</span><span class="p">;</span> <span class="c1">// Last date time that this record was modified in the DWR database</span>
+  <span class="nl">moreInformation</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Hyperlink to additional details</span>
+  <span class="nl">parcelName</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Parcel Name</span>
+  <span class="nl">permit</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Well permit number</span>
+  <span class="nl">permitCategoryDescr</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Permit Category Description</span>
+  <span class="nl">permitCurrentStatusDescr</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Permit Current Status Description</span>
+  <span class="nl">physicalAddress</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Physical Address</span>
+  <span class="nl">physicalCity</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Physical City</span>
+  <span class="nl">physicalPostalCode</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Physical Postal Code</span>
+  <span class="nl">physicalStateOrProvince</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Physical State Or Province</span>
+  <span class="nl">pm</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Principal Meridian of well’s legal location - there are 5 principal meridians in CO?: Sixth (S), New Mexico (N), Baca (B), Costilla (C), and Ute (U)</span>
+  <span class="nl">pumpInstaller</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Pump Installer</span>
+  <span class="nl">pumpLic</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Pump License</span>
+  <span class="nl">pumpTestYield</span><span class="p">?:</span> <span class="kr">number</span><span class="p">;</span> <span class="c1">// Pump Test Yield</span>
+  <span class="nl">q10</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Legal location?: 10 acre quarter section</span>
+  <span class="nl">q160</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Legal location?: 160 acre quarter section</span>
+  <span class="nl">q40</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Legal location?: 40 acre quarter section</span>
+  <span class="nl">range</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Legal location?: A number in the format “nnnd” where “nnn” is the range number and “d” is the direction either East or West</span>
+  <span class="nl">receipt</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Permit application receipt number</span>
+  <span class="nl">section</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Section number - township, range divided into 36 one square mile sections; “U” indicates location in Ute Correction (Division 7 only)</span>
+  <span class="nl">staticWaterLevel</span><span class="p">?:</span> <span class="kr">number</span><span class="p">;</span> <span class="c1">// Static Water Level (ft)</span>
+  <span class="nl">staticWaterLevelDate</span><span class="p">?:</span> <span class="nb">Date</span><span class="p">;</span> <span class="c1">// Static Water Level Date</span>
+  <span class="nl">topPerforatedCasing</span><span class="p">?:</span> <span class="kr">number</span><span class="p">;</span> <span class="c1">// Depth from surface to top of perforated casing (feet)</span>
+  <span class="nl">township</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// Legal location?: Township number and direction</span>
+  <span class="nl">utmX</span><span class="p">?:</span> <span class="kr">number</span><span class="p">;</span> <span class="c1">// The x (Easting) component of the Universal Transverse Mercator system. (Zone 13, NAD83 datum)</span>
+  <span class="nl">utmY</span><span class="p">?:</span> <span class="kr">number</span><span class="p">;</span> <span class="c1">// The y (Northing) component of the Universal Transverse Mercator system. (Zone 13, NAD83 datum)</span>
+  <span class="nl">waterDistrict</span><span class="p">?:</span> <span class="kr">number</span><span class="p">;</span> <span class="c1">// DWR Water District</span>
+  <span class="nl">wdid</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span> <span class="c1">// DWR unique structure identifier</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>Below is an example record in JSON</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"associatedAquifers"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ALL UNNAMED AQUIFERS"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"associatedUses"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Other"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"contactAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12 A1 PHILLIPS BUILDING"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"contactCity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BARTLESVILLE"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"contactName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PHILLIPS PETROLEUM CO"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"contactPostalCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"74004"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"contactStateOrProvince"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"contactType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Owner"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"coordsEw"</span><span class="p">:</span><span class="w"> </span><span class="mi">2130</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"coordsEwDir"</span><span class="p">:</span><span class="w"> </span><span class="s2">"W"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"coordsNs"</span><span class="p">:</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"coordsNsDir"</span><span class="p">:</span><span class="w"> </span><span class="s2">"N"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"county"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WELD"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"dateWellPlugged"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1995-07-18T00:00:00"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"denverBasinAquifer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yes"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"designatedBasinName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LOST CREEK"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"division"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">40.130818</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"locationAccuracy"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Spotted from section lines"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"locationType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Well (Application/Permit)"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">-104.406467</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"managementDistrictName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LOST CREEK"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"modified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2012-11-05T00:00:00"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"moreInformation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dwr.state.co.us/Tools/WellPermits/0000371B"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"permit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1995215-AB"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"permitCategoryDescr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Unknown"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"permitCurrentStatusDescr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Well Abandoned"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"pm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"S"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"q160"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NW"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"q40"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NE"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"range"</span><span class="p">:</span><span class="w"> </span><span class="s2">"63.0 W"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"receipt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0000371B"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"section"</span><span class="p">:</span><span class="w"> </span><span class="s2">"23"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"township"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.0 N"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"utmX"</span><span class="p">:</span><span class="w"> </span><span class="mf">550568.2</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"utmY"</span><span class="p">:</span><span class="w"> </span><span class="mf">4442445.4</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"waterDistrict"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"wdid"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<table><thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>permit</td>
+<td>string</td>
+<td>required</td>
+<td>Well permit number</td>
+</tr>
+<tr>
+<td>receipt</td>
+<td>string</td>
+<td>required</td>
+<td>Permit application receipt number</td>
+</tr>
+<tr>
+<td>contactName</td>
+<td>string</td>
+<td>required</td>
+<td>Contact Name</td>
+</tr>
+<tr>
+<td>asBuiltAquifers</td>
+<td>string</td>
+<td>optional</td>
+<td>As Built Aquifers</td>
+</tr>
+<tr>
+<td>associatedAquifers</td>
+<td>string</td>
+<td>optional</td>
+<td>Associated Aquifers</td>
+</tr>
+<tr>
+<td>associatedCaseNumbers</td>
+<td>string</td>
+<td>optional</td>
+<td>Water court case number(s) associated with water right</td>
+</tr>
+<tr>
+<td>associatedUses</td>
+<td>string</td>
+<td>optional</td>
+<td>Associated Uses</td>
+</tr>
+<tr>
+<td>bottomPerforatedCasing</td>
+<td>number</td>
+<td>optional</td>
+<td>Depth from surface to bottom of perforated casing (feet)</td>
+</tr>
+<tr>
+<td>contactAddress</td>
+<td>string</td>
+<td>optional</td>
+<td>Contact Address</td>
+</tr>
+<tr>
+<td>contactCity</td>
+<td>string</td>
+<td>optional</td>
+<td>Contact City</td>
+</tr>
+<tr>
+<td>contactPostalCode</td>
+<td>string</td>
+<td>optional</td>
+<td>Contact Postal Code</td>
+</tr>
+<tr>
+<td>contactStateOrProvince</td>
+<td>string</td>
+<td>optional</td>
+<td>Contact State Or Province</td>
+</tr>
+<tr>
+<td>contactType</td>
+<td>string</td>
+<td>optional</td>
+<td>Contact Type</td>
+</tr>
+<tr>
+<td>coordsEw</td>
+<td>number</td>
+<td>optional</td>
+<td>Distance and direction from East/West section line (feet)</td>
+</tr>
+<tr>
+<td>coordsEwDir</td>
+<td>string</td>
+<td>optional</td>
+<td>Direction of measurement from East/West section line</td>
+</tr>
+<tr>
+<td>coordsNs</td>
+<td>number</td>
+<td>optional</td>
+<td>Distance and direction from North/South section line (feet)</td>
+</tr>
+<tr>
+<td>coordsNsDir</td>
+<td>string</td>
+<td>optional</td>
+<td>Direction of measurement from North/South section line</td>
+</tr>
+<tr>
+<td>county</td>
+<td>string</td>
+<td>optional</td>
+<td>County where the well is located</td>
+</tr>
+<tr>
+<td>date1stBeneficialUse</td>
+<td>Date</td>
+<td>optional</td>
+<td>Date of First Beneficial Use</td>
+</tr>
+<tr>
+<td>dateApplicationReceived</td>
+<td>Date</td>
+<td>optional</td>
+<td>Date Application Received</td>
+</tr>
+<tr>
+<td>datePermitExpires</td>
+<td>Date</td>
+<td>optional</td>
+<td>Date Permit Expires</td>
+</tr>
+<tr>
+<td>datePermitIssued</td>
+<td>Date</td>
+<td>optional</td>
+<td>Date Permit Issued</td>
+</tr>
+<tr>
+<td>datePumpInstalled</td>
+<td>Date</td>
+<td>optional</td>
+<td>Date Pump Installed</td>
+</tr>
+<tr>
+<td>dateWellCompleted</td>
+<td>Date</td>
+<td>optional</td>
+<td>Date Well Completed</td>
+</tr>
+<tr>
+<td>dateWellPlugged</td>
+<td>Date</td>
+<td>optional</td>
+<td>Date Well Plugged</td>
+</tr>
+<tr>
+<td>denverBasinAquifer</td>
+<td>string</td>
+<td>optional</td>
+<td>Denver Basin Aquifer</td>
+</tr>
+<tr>
+<td>depthTotal</td>
+<td>number</td>
+<td>optional</td>
+<td>Depth Total (ft)</td>
+</tr>
+<tr>
+<td>designatedBasinName</td>
+<td>string</td>
+<td>optional</td>
+<td>Eight established geographic areas in Colorado&#39;s Eastern Plains where users rely primarily on groundwater for water supply</td>
+</tr>
+<tr>
+<td>division</td>
+<td>number</td>
+<td>optional</td>
+<td>DWR Water Division</td>
+</tr>
+<tr>
+<td>driller</td>
+<td>string</td>
+<td>optional</td>
+<td>Driller</td>
+</tr>
+<tr>
+<td>drillerLic</td>
+<td>string</td>
+<td>optional</td>
+<td>Driller License</td>
+</tr>
+<tr>
+<td>elevation</td>
+<td>number</td>
+<td>optional</td>
+<td>Elevation (ft)</td>
+</tr>
+<tr>
+<td>latitude</td>
+<td>number</td>
+<td>optional</td>
+<td>Latitude value in decimal degrees</td>
+</tr>
+<tr>
+<td>locationAccuracy</td>
+<td>string</td>
+<td>optional</td>
+<td>Accuracy of location coordinates</td>
+</tr>
+<tr>
+<td>locationType</td>
+<td>string</td>
+<td>optional</td>
+<td>Location Type</td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>number</td>
+<td>optional</td>
+<td>Longitude (decimal degrees)</td>
+</tr>
+<tr>
+<td>managementDistrictName</td>
+<td>string</td>
+<td>optional</td>
+<td>Thirteen local districts, within the Designated Basins, with additional administrative authority</td>
+</tr>
+<tr>
+<td>modified</td>
+<td>Date</td>
+<td>optional</td>
+<td>Last date time that this record was modified in the DWR database</td>
+</tr>
+<tr>
+<td>moreInformation</td>
+<td>string</td>
+<td>optional</td>
+<td>Hyperlink to additional details</td>
+</tr>
+<tr>
+<td>parcelName</td>
+<td>string</td>
+<td>optional</td>
+<td>Parcel Name</td>
+</tr>
+<tr>
+<td>permitCategoryDescr</td>
+<td>string</td>
+<td>optional</td>
+<td>Permit Category Description</td>
+</tr>
+<tr>
+<td>permitCurrentStatusDescr</td>
+<td>string</td>
+<td>optional</td>
+<td>Permit Current Status Description</td>
+</tr>
+<tr>
+<td>physicalAddress</td>
+<td>string</td>
+<td>optional</td>
+<td>Physical Address</td>
+</tr>
+<tr>
+<td>physicalCity</td>
+<td>string</td>
+<td>optional</td>
+<td>Physical City</td>
+</tr>
+<tr>
+<td>physicalPostalCode</td>
+<td>string</td>
+<td>optional</td>
+<td>Physical Postal Code</td>
+</tr>
+<tr>
+<td>physicalStateOrProvince</td>
+<td>string</td>
+<td>optional</td>
+<td>Physical State Or Province</td>
+</tr>
+<tr>
+<td>pm</td>
+<td>string</td>
+<td>optional</td>
+<td>Principal Meridian of well’s legal location - there are 5 principal meridians in CO: Sixth (S), New Mexico (N), Baca (B), Costilla (C), and Ute (U)</td>
+</tr>
+<tr>
+<td>pumpInstaller</td>
+<td>string</td>
+<td>optional</td>
+<td>Pump Installer</td>
+</tr>
+<tr>
+<td>pumpLic</td>
+<td>string</td>
+<td>optional</td>
+<td>Pump License</td>
+</tr>
+<tr>
+<td>pumpTestYield</td>
+<td>number</td>
+<td>optional</td>
+<td>Pump Test Yield</td>
+</tr>
+<tr>
+<td>q10</td>
+<td>string</td>
+<td>optional</td>
+<td>Legal location: 10 acre quarter section</td>
+</tr>
+<tr>
+<td>q160</td>
+<td>string</td>
+<td>optional</td>
+<td>Legal location: 160 acre quarter section</td>
+</tr>
+<tr>
+<td>q40</td>
+<td>string</td>
+<td>optional</td>
+<td>Legal location: 40 acre quarter section</td>
+</tr>
+<tr>
+<td>range</td>
+<td>string</td>
+<td>optional</td>
+<td>Legal location: A number in the format “nnnd” where “nnn” is the range number and “d” is the direction either East or West</td>
+</tr>
+<tr>
+<td>section</td>
+<td>string</td>
+<td>optional</td>
+<td>Section number - township, range divided into 36 one square mile sections; “U” indicates location in Ute Correction (Division 7 only)</td>
+</tr>
+<tr>
+<td>staticWaterLevel</td>
+<td>number</td>
+<td>optional</td>
+<td>Static Water Level (ft)</td>
+</tr>
+<tr>
+<td>staticWaterLevelDate</td>
+<td>Date</td>
+<td>optional</td>
+<td>Static Water Level Date</td>
+</tr>
+<tr>
+<td>topPerforatedCasing</td>
+<td>number</td>
+<td>optional</td>
+<td>Depth from surface to top of perforated casing (feet)</td>
+</tr>
+<tr>
+<td>township</td>
+<td>string</td>
+<td>optional</td>
+<td>Legal location: Township number and direction</td>
+</tr>
+<tr>
+<td>utmX</td>
+<td>number</td>
+<td>optional</td>
+<td>The x (Easting) component of the Universal Transverse Mercator system. (Zone 13, NAD83 datum)</td>
+</tr>
+<tr>
+<td>utmY</td>
+<td>number</td>
+<td>optional</td>
+<td>The y (Northing) component of the Universal Transverse Mercator system. (Zone 13, NAD83 datum)</td>
+</tr>
+<tr>
+<td>waterDistrict</td>
+<td>number</td>
+<td>optional</td>
+<td>DWR Water District</td>
+</tr>
+<tr>
+<td>wdid</td>
+<td>string</td>
+<td>optional</td>
+<td>DWR unique structure identifier</td>
+</tr>
+</tbody></table>
+
+
+<h2 id='list-well-permits'>List Well Permits</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://cowaternavigator/api/well-permits?permit=FP-63209"</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">kittn</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">"</span><span class="s2">meowmeowmeow</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
+</code></pre></div>
+<blockquote>
+<p>Successful deletion will return the deleted records in JSON:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"permit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FP-63209"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"contactName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FP-63209"</span><span class="w">
+    </span><span class="err">//</span><span class="w"> </span><span class="err">...etc</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"permit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-02"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"contactName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FP-63209"</span><span class="w">
+    </span><span class="err">//</span><span class="w"> </span><span class="err">...etc</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"permit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-01"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"contactName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FP-63209"</span><span class="w">
+    </span><span class="err">//</span><span class="w"> </span><span class="err">...etc</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+  </span><span class="err">//...etc</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves a list of well permit records matching the query parameters.</p>
+<h3 id='http-request'>HTTP Request</h3>
+
+<p><code>GET /api/well-permits</code></p>
+
+<h3 id='query-parameters'>Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>permit</td>
+<td>false</td>
+<td>Query by one or more well permit numbers.</td>
+</tr>
+<tr>
+<td>reciept</td>
+<td>false</td>
+<td>Query by the reciept number associated with the well permit.</td>
+</tr>
+<tr>
+<td>contactName</td>
+<td>false</td>
+<td>Query by one or more contact names.</td>
+</tr>
+</tbody></table>
+
+<p><h2 id='create-well-permits'>Create Well Permits</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> POST <span class="s2">&quot;https://cowaternavigator/api/well-permits&quot;</span> <span class="se">&lt;/span&gt;
+  <span class="nt">-d</span> <span class="o">{</span>
+      <span class="s2">&quot;date&quot;</span>: <span class="s2">&quot;2021-01&quot;</span>,
+      <span class="s2">&quot;permitNumber&quot;</span>: <span class="s2">&quot;FP-63209&quot;</span>
+    <span class="o">}</span></p>
+
+<p></code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">&quot;</span><span class="s2">kittn</span><span class="dl">&quot;</span><span class="p">);</span></p>
+
+<p><span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">&quot;</span><span class="s2">meowmeowmeow</span><span class="dl">&quot;</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-01&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nl">&quot;permitNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FP-63209&quot;</span><span class="w">
+  </span><span class="err">//</span><span class="w"> </span><span class="err">...etc</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint creates a new permit number.</p></p>
+
+<p>The record to be created should be send in the body of the request.</p>
+
+<aside class="notice">
+  If a record already exists that matches the permitNumber - a "400 BadRequest" error will be returned.
+</aside>
+
+<h3 id='http-request'>HTTP Request</h3>
+
+<p><code>POST /api/meter-readings/{permitNumber}/{date}</code></p>
+
+<h3 id='url-parameters'>URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>permitNumber</td>
+<td>true</td>
+<td>A string matching the well permit number.</td>
+</tr>
+</tbody></table>
+
+<p><h2 id='update-a-well-permit'>Update a Well Permit</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> PATCH <span class="s2">&quot;https://cowaternavigator/api/administrative-reports/FP-63209/2022&quot;</span> <span class="se">&lt;/span&gt;
+  <span class="nt">-d</span> <span class="o">{</span> <span class="s2">&quot;flowMeter&quot;</span>: <span class="o">{</span> <span class="s2">&quot;value&quot;</span>: <span class="s2">&quot;150&quot;</span> <span class="o">}</span> <span class="o">}</span></p>
+
+<p></code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">&quot;</span><span class="s2">kittn</span><span class="dl">&quot;</span><span class="p">);</span></p>
+
+<p><span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">&quot;</span><span class="s2">meowmeowmeow</span><span class="dl">&quot;</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-01&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nl">&quot;permitNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FP-63209&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nl">&quot;flowMeter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+  </span><span class="err">//</span><span class="w"> </span><span class="err">...etc</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint creates a new meter reading.</p></p>
+
+<p>The record to be created should be send in the body of the request.</p>
+
+<aside class="warning">
+  Specifying a property that already exists in the database will overwrite that data.  Any property not specified will remain unchanged.
+</aside>
+
+<h3 id='http-request'>HTTP Request</h3>
+
+<p><code>POST /api/administrative-reports/{permitNumber}/{year}</code></p>
+
+<h3 id='url-parameters'>URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>permitNumber</td>
+<td>true</td>
+<td>A string matching the well permit number.</td>
+</tr>
+<tr>
+<td>year</td>
+<td>true</td>
+<td>The year associated with the administrative report.</td>
+</tr>
+</tbody></table>
+
+<h3 id='body-properties'>Body Properties</h3>
+
+<table><thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>permitNumber</td>
+<td>string</td>
+<td>required</td>
+<td>The permit number associated with the administratrive report</td>
+</tr>
+<tr>
+<td>year</td>
+<td>number</td>
+<td>required</td>
+<td>The calendar year associated with the administrative report</td>
+</tr>
+<tr>
+<td>originalAppropriation</td>
+<td><a href="#calculated-value-properties">CalculatedValue</a></td>
+<td>optional</td>
+<td>Line 1</td>
+</tr>
+<tr>
+<td>allowedAppropriation</td>
+<td><a href="#calculated-value-properties">CalculatedValue</a></td>
+<td>optional</td>
+<td>Line 2</td>
+</tr>
+<tr>
+<td>line3</td>
+<td><a href="#calculated-value-properties">CalculatedValue</a></td>
+<td>optional</td>
+<td>Line 3</td>
+</tr>
+<tr>
+<td>maxBankingReserve</td>
+<td><a href="#calculated-value-properties">CalculatedValue</a></td>
+<td>optional</td>
+<td>Line 4</td>
+</tr>
+<tr>
+<td>bankingReserveLastYear</td>
+<td><a href="#calculated-value-properties">CalculatedValue</a></td>
+<td>optional</td>
+<td>Line 5</td>
+</tr>
+<tr>
+<td>pumpingLimitThisYear</td>
+<td><a href="#calculated-value-properties">CalculatedValue</a></td>
+<td>optional</td>
+<td>Line 6</td>
+</tr>
+<tr>
+<td>line6Option</td>
+<td>&quot;a&quot; or &quot;b&quot;</td>
+<td>optional</td>
+<td></td>
+</tr>
+<tr>
+<td>totalPumpedThisYear</td>
+<td><a href="#calculated-value-properties">CalculatedValue</a></td>
+<td>optional</td>
+<td>Line 7</td>
+</tr>
+<tr>
+<td>changeInBankingReserveThisYear</td>
+<td><a href="#calculated-value-properties">CalculatedValue</a></td>
+<td>optional</td>
+<td>Line 8</td>
+</tr>
+<tr>
+<td>bankingReserveThisYear</td>
+<td><a href="#calculated-value-properties">CalculatedValue</a></td>
+<td>optional</td>
+<td>Line 9</td>
+</tr>
+<tr>
+<td>line10</td>
+<td><a href="#calculated-value-properties">CalculatedValue</a></td>
+<td>optional</td>
+<td>Line 10</td>
+</tr>
+<tr>
+<td>pumpingLimitNextYear</td>
+<td><a href="#calculated-value-properties">CalculatedValue</a></td>
+<td>optional</td>
+<td>Line 11</td>
+</tr>
+<tr>
+<td>dateTimeCreated</td>
+<td>Date</td>
+<td>read-only</td>
+<td></td>
+</tr>
+<tr>
+<td>wellUsageData</td>
+<td><a href="#well-usage-properties">WellUsage</a></td>
+<td>optional</td>
+<td>An object describing the well usage conditions</td>
+</tr>
+</tbody></table>
+
+<p><h2 id='delete-a-well-permit'>Delete a Well Permit</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">&quot;http://example.com/api/kittens/2&quot;</span> <span class="se">&lt;/span&gt;
+  <span class="nt">-X</span> DELETE <span class="se">&lt;/span&gt;
+  <span class="nt">-H</span> <span class="s2">&quot;Authorization: token&quot;</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">&quot;</span><span class="s2">kittn</span><span class="dl">&quot;</span><span class="p">);</span></p>
+
+<p><span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">&quot;</span><span class="s2">meowmeowmeow</span><span class="dl">&quot;</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns the record deleted:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-02&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nl">&quot;permitNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FP-63209&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nl">&quot;flowMeter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint deletes a meter reading.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>DELETE /api/meter-readings/{permitNumber}/{date}</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>permitNumber</td>
+<td>true</td>
+<td>A string matching the well permit number.</td>
+</tr>
+<tr>
+<td>date</td>
+<td>true</td>
+<td>A string formatted &#39;YYYY-MM&#39;.</td>
+</tr>
+</tbody></table></p>

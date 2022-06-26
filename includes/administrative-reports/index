@@ -1,6 +1,81 @@
 <h1 id='administrative-reports'>Administrative Reports</h1>
 <h2 id='administrative-report-properties'>Administrative Report Properties</h2>
 
+<blockquote>
+<p>Example record:</p>
+</blockquote>
+
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"permitNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"62309-FP"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2022</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"allowedAppropriation"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"shouldBe"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"calculationStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"bankingReserveLastYear"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"shouldBe"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"calculationStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"bankingReserveThisYear"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">38</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"shouldBe"</span><span class="p">:</span><span class="w"> </span><span class="mi">38</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"calculationStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"changeInBankingReserveThisYear"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">38</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"shouldBe"</span><span class="p">:</span><span class="w"> </span><span class="mi">38</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"calculationStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"dateTimeCreated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fri, 28 Jan 2022 13:31:44 GMT"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"line10"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">88</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"shouldBe"</span><span class="p">:</span><span class="w"> </span><span class="mi">88</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"calculationStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"line3"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"shouldBe"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"calculationStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"line6Option"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"maxBankingReserve"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"shouldBe"</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"calculationStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"originalAppropriation"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"shouldBe"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"calculationStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"pumpingLimitNextYear"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">88</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"shouldBe"</span><span class="p">:</span><span class="w"> </span><span class="mi">88</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"calculationStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"pumpingLimitThisYear"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"shouldBe"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"calculationStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"totalPumpedThisYear"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"shouldBe"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"calculationStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"wellUsageData"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"changeOfUse"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"comingledWells"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dateTimeUpdated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mon, 31 Jan 2022 15:23:58 GMT"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"expandedAcres"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"other"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+
 <p>The administrative report fields represent the data from the DBB-013 Administrative Reporting form.</p>
 
 <h3 id='administrative-report-properties-2'>Administrative Report Properties</h3>
@@ -14,44 +89,50 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>calendarYear</td>
+<td>permitNumber</td>
+<td>string</td>
+<td>required</td>
+<td>The permit number associated with the administratrive report</td>
+</tr>
+<tr>
+<td>year</td>
 <td>number</td>
 <td>required</td>
 <td>The calendar year associated with the administrative report</td>
 </tr>
 <tr>
 <td>originalAppropriation</td>
-<td>number</td>
+<td><a href="#calculated-value-properties">CalculatedValue</a></td>
 <td>optional</td>
 <td>Line 1</td>
 </tr>
 <tr>
 <td>allowedAppropriation</td>
-<td>number</td>
+<td><a href="#calculated-value-properties">CalculatedValue</a></td>
 <td>optional</td>
 <td>Line 2</td>
 </tr>
 <tr>
 <td>line3</td>
-<td>number</td>
+<td><a href="#calculated-value-properties">CalculatedValue</a></td>
 <td>optional</td>
 <td>Line 3</td>
 </tr>
 <tr>
 <td>maxBankingReserve</td>
-<td>number</td>
+<td><a href="#calculated-value-properties">CalculatedValue</a></td>
 <td>optional</td>
 <td>Line 4</td>
 </tr>
 <tr>
 <td>bankingReserveLastYear</td>
-<td>number</td>
+<td><a href="#calculated-value-properties">CalculatedValue</a></td>
 <td>optional</td>
 <td>Line 5</td>
 </tr>
 <tr>
 <td>pumpingLimitThisYear</td>
-<td>number</td>
+<td><a href="#calculated-value-properties">CalculatedValue</a></td>
 <td>optional</td>
 <td>Line 6</td>
 </tr>
@@ -63,31 +144,31 @@
 </tr>
 <tr>
 <td>totalPumpedThisYear</td>
-<td>number</td>
+<td><a href="#calculated-value-properties">CalculatedValue</a></td>
 <td>optional</td>
 <td>Line 7</td>
 </tr>
 <tr>
 <td>changeInBankingReserveThisYear</td>
-<td>number</td>
+<td><a href="#calculated-value-properties">CalculatedValue</a></td>
 <td>optional</td>
 <td>Line 8</td>
 </tr>
 <tr>
 <td>bankingReserveThisYear</td>
-<td>number</td>
+<td><a href="#calculated-value-properties">CalculatedValue</a></td>
 <td>optional</td>
 <td>Line 9</td>
 </tr>
 <tr>
 <td>line10</td>
-<td>number</td>
+<td><a href="#calculated-value-properties">CalculatedValue</a></td>
 <td>optional</td>
 <td>Line 10</td>
 </tr>
 <tr>
 <td>pumpingLimitNextYear</td>
-<td>number</td>
+<td><a href="#calculated-value-properties">CalculatedValue</a></td>
 <td>optional</td>
 <td>Line 11</td>
 </tr>
@@ -99,7 +180,7 @@
 </tr>
 <tr>
 <td>wellUsageData</td>
-<td><a href="#well-usage-fields">WellUsage</a></td>
+<td><a href="#well-usage-properties">WellUsage</a></td>
 <td>optional</td>
 <td>An object describing the well usage conditions</td>
 </tr>
@@ -147,113 +228,73 @@
 </tr>
 </tbody></table>
 
-<h2 id='list-administrative-reports'>List Administrative Reports</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://cowaternavigator/api/administrative-reports/63209-FP"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">kittn</span><span class="dl">"</span><span class="p">);</span>
+<h2 id='list-administrative-reports'>List Administrative Reports</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://cowater.app/api/administrative-reports?permitnumber=63209-FP&amp;year=2022&amp;year=2021&amp;year=2020"</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">axios</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">axios</span><span class="dl">'</span><span class="p">);</span>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">"</span><span class="s2">meowmeowmeow</span><span class="dl">"</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
+<span class="kd">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">method</span><span class="p">:</span> <span class="dl">'</span><span class="s1">GET</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">https://cowater.app/api/administrative-reports</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">params</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">permitNumber</span><span class="p">:</span> <span class="dl">'</span><span class="s1">63209-FP</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">year</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">2022</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">2021</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">2020</span><span class="dl">'</span><span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">axios</span>
+  <span class="p">.</span><span class="nx">request</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+  <span class="p">});</span>
 </code></pre></div>
 <blockquote>
 <p>Successful deletion will return the deleted records in JSON:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-01"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"permitNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FP-63209"</span><span class="w">
+    </span><span class="nl">"permitNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FP-63209"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2022</span><span class="w">
+    </span><span class="err">//</span><span class="w"> </span><span class="err">...etc</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-02"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"permitNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FP-63209"</span><span class="w">
+    </span><span class="nl">"permitNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FP-63209"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2021</span><span class="w">
+    </span><span class="err">//</span><span class="w"> </span><span class="err">...etc</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-01"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"permitNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FP-63209"</span><span class="w">
+    </span><span class="nl">"permitNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FP-63209"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2020</span><span class="w">
+    </span><span class="err">//</span><span class="w"> </span><span class="err">...etc</span><span class="w">
   </span><span class="p">}</span><span class="w">
-  </span><span class="err">//</span><span class="w"> </span><span class="err">...etc</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div>
 <p>This endpoint retrieves administrative reports associated with a permit number.</p>
 
 <p>This data corresponds to the DBB-013 Administrative Reporting form.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET /api/administrative-reports/{permitNumber}</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>permitNumber</td>
-<td>true</td>
-<td>A string matching the well permit number.</td>
-</tr>
-</tbody></table>
+<p><code>GET /api/administrative-reports</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>year</td>
-<td>false</td>
-<td>Define a year to retrieve all records for that year.</td>
-</tr>
-</tbody></table>
-
-
-<h2 id='get-an-administrative-report'>Get an Administrative Report</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://cowaternavigator/api/administrative-reports/FP-63209/2022"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: token"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">axios</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">axios</span><span class="dl">"</span><span class="p">);</span>
-
-<span class="nx">axios</span>
-  <span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://cowaternavigator/api/administrative-reports/FP-63209/2022</span><span class="dl">"</span><span class="p">)</span>
-  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="c1">// handle success</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
-  <span class="p">})</span>
-  <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="c1">// handle error</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
-  <span class="p">});</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-06"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"permitNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FP-63209"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"flowMeter"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-  </span><span class="err">//</span><span class="w"> </span><span class="err">etc...</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves a specific meter reading.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET /api/administrative-report/{permitNumber}/{year}</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Required</th>
+<th>Type</th>
+<th>Restrictions</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>permitNumber</td>
-<td>true</td>
+<td>string</td>
+<td>requried</td>
 <td>A string matching the well permit number.</td>
 </tr>
 <tr>
 <td>year</td>
-<td>true</td>
-<td>A string formatted &#39;YYYY-MM&#39;.</td>
+<td>string</td>
+<td>optional</td>
+<td>Define a year to retrieve the administrative report for that year.</td>
 </tr>
 </tbody></table>
 
@@ -264,48 +305,56 @@
 <p>Here we are creating two new records, one with a flowMeter value and one with a powerMeter value.</p>
 </blockquote>
 
-<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> POST <span class="s2">"https://cowaternavigator/api/administrative-reports/FP-63209"</span> <span class="se">\</span>
-  <span class="nt">-d</span> <span class="se">\</span>
-  <span class="o">[</span> <span class="se">\</span>
-    <span class="o">{</span> <span class="se">\</span>
-      <span class="s2">"date"</span>: <span class="s2">"2021-01"</span>, <span class="se">\</span>
-      <span class="s2">"flowMeter"</span>: <span class="o">{</span> <span class="se">\</span>
-        <span class="s2">"value"</span>: 200 <span class="se">\</span>
-      <span class="o">}</span> <span class="se">\</span>
-    <span class="o">}</span>, <span class="se">\</span>
-    <span class="o">{</span> <span class="se">\</span>
-      <span class="s2">"date"</span>: <span class="s2">"2021-02"</span>, <span class="se">\</span>
-      <span class="s2">"powerMeter"</span>: <span class="o">{</span> <span class="se">\</span>
-        <span class="s2">"value"</span>: 500 <span class="se">\</span>
-      <span class="o">}</span> <span class="se">\</span>
-    <span class="o">}</span> <span class="se">\</span>
-  <span class="o">]</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">kittn</span><span class="dl">"</span><span class="p">);</span>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> POST <span class="s2">"https://cowaternavigator/api/administrative-reports/63209-FP/2022"</span> <span class="se">\\</span>
+  <span class="nt">-d</span> <span class="se">\\</span>
+  <span class="o">{</span> <span class="se">\\</span>
+    <span class="s2">"allowedAppropriation"</span>: <span class="o">{</span> <span class="se">\\</span>
+      <span class="s2">"value"</span>: 50, <span class="se">\\</span>
+    <span class="o">}</span>, <span class="se">\\</span>
+    <span class="s2">"bankingReserveLastYear"</span>: <span class="o">{</span> <span class="se">\\</span>
+      <span class="s2">"value"</span>: 0, <span class="se">\\</span>
+    <span class="o">}</span> <span class="se">\\</span>
+  <span class="o">}</span>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">"</span><span class="s2">meowmeowmeow</span><span class="dl">"</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">axios</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">axios</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">method</span><span class="p">:</span> <span class="dl">'</span><span class="s1">POST</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">https://cowater.app/api/administrative-reports/63209-FP/2022</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">body</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">allowedAppropriation</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">value</span><span class="p">:</span> <span class="mi">50</span>
+    <span class="p">},</span>
+    <span class="na">bankingReserveLastYear</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">value</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">axios</span>
+  <span class="p">.</span><span class="nx">request</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+  <span class="p">});</span>
 </code></pre></div>
 
 <blockquote>
 <p>Successful creation will return the records in JSON.</p>
 </blockquote>
 
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-01"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"permitNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FP-63209"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"flowMeter"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"permit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"63209-FP"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"year"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"allowedAppropriation"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-02"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"permitNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FP-63209"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"powerMeter"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+  </span><span class="nl">"bankingReserveLastYear"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
   </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 
 <p>This endpoint creates new a new administrative report</p>
@@ -326,7 +375,7 @@
 
 <table><thead>
 <tr>
-<th>Property</th>
+<th>Parameter</th>
 <th>Type</th>
 <th>Restrictions</th>
 <th>Description</th>
@@ -335,115 +384,150 @@
 <tr>
 <td>permitNumber</td>
 <td>string</td>
-<td>required</td>
-<td>The well permit number identifying the well.</td>
+<td>true</td>
+<td>A string matching the well permit number.</td>
 </tr>
 <tr>
 <td>year</td>
 <td>string</td>
-<td>required</td>
-<td>The year corresponding to the administrative report</td>
+<td>true</td>
+<td>The year matching the administrative report.</td>
 </tr>
 </tbody></table>
 
 <h3 id='body-properties'>Body Properties</h3>
 
+<p>Expected structure of the body is described in <a href="#administrative-report-properties">Administrative Report Properties</a></p>
+
+<p><h2 id='update-administrative-report'>Update Administrative Report</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> PATCH <span class="s2">&quot;https://cowaternavigator/api/administrative-reports/FP-63209/2022&quot;</span> <span class="se">&lt;/span&gt;
+  <span class="nt">-d</span> <span class="o">{</span> <span class="s2">&quot;allowedAppropriation&quot;</span>: <span class="o">{</span> <span class="s2">&quot;value&quot;</span>: 100 <span class="o">}</span> <span class="o">}</span></p>
+
+<p></code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">axios</span> <span class="nx">require</span><span class="p">(</span><span class="dl">&#39;</span><span class="s1">axios</span><span class="dl">&#39;</span><span class="p">);</span></p>
+
+<p><span class="kd">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">method</span><span class="p">:</span> <span class="dl">&#39;</span><span class="s1">PATCH</span><span class="dl">&#39;</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="dl">&#39;</span><span class="s1">https://cowater.app/api/administrative-reports/63209-FP/2022</span><span class="dl">&#39;</span><span class="p">,</span>
+  <span class="na">body</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">allowedAppropriation</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">value</span><span class="p">:</span> <span class="mi">100</span>
+    <span class="p">},</span>
+  <span class="p">}</span>
+<span class="p">}</span></p>
+
+<p><span class="nx">axios</span>
+  <span class="p">.</span><span class="nx">request</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+  <span class="p">});</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-01&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nl">&quot;permitNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FP-63209&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nl">&quot;allowedAppropriation&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+  </span><span class="err">//</span><span class="w"> </span><span class="err">...etc</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint creates a new meter reading.</p></p>
+
+<p>The record to be created should be send in the body of the request.</p>
+
+<aside class="warning">
+  Specifying a property that already exists in the database will overwrite that data.  Any property not specified will remain unchanged.
+</aside>
+
+<h3 id='http-request'>HTTP Request</h3>
+
+<p><code>PATCH /api/administrative-reports/{permitNumber}/{year}</code></p>
+
+<h3 id='url-parameters'>URL Parameters</h3>
+
 <table><thead>
 <tr>
-<th>Property</th>
+<th>Parameter</th>
 <th>Type</th>
 <th>Restrictions</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>calendarYear</td>
-<td>number</td>
-<td>required</td>
-<td>The calendar year associated with the administrative report</td>
+<td>permitNumber</td>
+<td>string</td>
+<td>true</td>
+<td>A string matching the well permit number.</td>
 </tr>
 <tr>
-<td>originalAppropriation</td>
-<td>number</td>
-<td>optional</td>
-<td>Line 1</td>
-</tr>
-<tr>
-<td>allowedAppropriation</td>
-<td>number</td>
-<td>optional</td>
-<td>Line 2</td>
-</tr>
-<tr>
-<td>line3</td>
-<td>number</td>
-<td>optional</td>
-<td>Line 3</td>
-</tr>
-<tr>
-<td>maxBankingReserve</td>
-<td>number</td>
-<td>optional</td>
-<td>Line 4</td>
-</tr>
-<tr>
-<td>bankingReserveLastYear</td>
-<td>number</td>
-<td>optional</td>
-<td>Line 5</td>
-</tr>
-<tr>
-<td>pumpingLimitThisYear</td>
-<td>number</td>
-<td>optional</td>
-<td>Line 6</td>
-</tr>
-<tr>
-<td>line6Option</td>
-<td>&quot;a&quot; or &quot;b&quot;</td>
-<td>optional</td>
-<td></td>
-</tr>
-<tr>
-<td>totalPumpedThisYear</td>
-<td>number</td>
-<td>optional</td>
-<td>Line 7</td>
-</tr>
-<tr>
-<td>changeInBankingReserveThisYear</td>
-<td>number</td>
-<td>optional</td>
-<td>Line 8</td>
-</tr>
-<tr>
-<td>bankingReserveThisYear</td>
-<td>number</td>
-<td>optional</td>
-<td>Line 9</td>
-</tr>
-<tr>
-<td>line10</td>
-<td>number</td>
-<td>optional</td>
-<td>Line 10</td>
-</tr>
-<tr>
-<td>pumpingLimitNextYear</td>
-<td>number</td>
-<td>optional</td>
-<td>Line 11</td>
-</tr>
-<tr>
-<td>dateTimeCreated</td>
-<td>Date</td>
-<td>read-only</td>
-<td></td>
-</tr>
-<tr>
-<td>wellUsageData</td>
-<td><a href="#well-usage-fields">WellUsage</a></td>
-<td>optional</td>
-<td>An object describing the well usage conditions</td>
+<td>year</td>
+<td>string</td>
+<td>true</td>
+<td>The year matching the administrative report.</td>
 </tr>
 </tbody></table>
+
+<h3 id='body-properties'>Body Properties</h3>
+
+<p>Expected structure of the body is described in <a href="#administrative-report-properties">Administrative Report Properties</a></p>
+
+<p><h2 id='delete-administrative-report'>Delete Administrative Report</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">&quot;http://example.com/api/kittens/2&quot;</span> <span class="se">&lt;/span&gt;
+  <span class="nt">-X</span> DELETE <span class="se">&lt;/span&gt;
+  <span class="nt">-H</span> <span class="s2">&quot;Authorization: token&quot;</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">axios</span> <span class="nx">require</span><span class="p">(</span><span class="dl">&#39;</span><span class="s1">axios</span><span class="dl">&#39;</span><span class="p">);</span></p>
+
+<p><span class="kd">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">method</span><span class="p">:</span> <span class="dl">&#39;</span><span class="s1">DELETE</span><span class="dl">&#39;</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="dl">&#39;</span><span class="s1">https://cowater.app/api/administrative-reports/63209-FP/2022</span><span class="dl">&#39;</span><span class="p">,</span>
+<span class="p">}</span></p>
+
+<p><span class="nx">axios</span>
+  <span class="p">.</span><span class="nx">request</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+  <span class="p">});</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns the record deleted:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nl">&quot;permitNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FP-63209&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nl">&quot;allowedAppropriation&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+  </span><span class="err">//</span><span class="w"> </span><span class="err">...etc</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint deletes a meter reading.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>DELETE /api/meter-readings/{permitNumber}/{year}</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>permitNumber</td>
+<td>string</td>
+<td>true</td>
+<td>A string matching the well permit number.</td>
+</tr>
+<tr>
+<td>year</td>
+<td>string</td>
+<td>true</td>
+<td>The year matching the administrative report.</td>
+</tr>
+</tbody></table></p>
