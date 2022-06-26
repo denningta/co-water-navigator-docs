@@ -1,34 +1,58 @@
 ## Create a Meter Reading
 
 ```shell
-curl -X POST "https://cowaternavigator/api/meter-readings/FP-63209/2022-06" \
-  -d {
-      "date": "2021-01",
-      "permitNumber": "FP-63209"
+curl "<%= config[:endpoint] %>/api/meter-readings/63209-FP/2022-06" \\
+  -X POST \\
+  -d { \\
+      "flowMeter": { \\
+        "value": "150" \\
+      } \\
     }
 
 ```
 
 ```javascript
-const kittn = require("kittn");
+const axios = require("axios");
 
-let api = kittn.authorize("meowmeowmeow");
-let kittens = api.kittens.get();
+const options = {
+  method: "POST",
+  url: "<%= config[:endpoint] %>/api/meter-readings/63209-FP/2022-06",
+  data: {
+    flowMeter: {
+      value: 150,
+    },
+  },
+};
+
+axios
+  .request(options)
+  .then((response) => {
+    console.log(response.data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 ```
 
 > The above command returns JSON structured like this:
 
 ```json
 {
-  "date": "2021-01",
-  "permitNumber": "FP-63209"
-  // ...etc
+  "date": "2022-06",
+  "permitNumber": "63209-FP",
+  "flowMeter": {
+    "value": "150"
+  }
 }
 ```
 
 This endpoint creates a new meter reading.
 
-The record to be created should be send in the body of the request.
+The record to be created should be sent in the body of the request.
+
+<aside class="notice">
+  Successful creation of a meter reading will create meter readings for the other eleven months in the specified calendar year.  These records will be populated with date and permitNumber only.  
+</aside>
 
 <aside class="notice">
   If a record already exists that matches the permitNumber and date of the request body - a "400 BadRequest" error will be returned.
@@ -40,7 +64,15 @@ The record to be created should be send in the body of the request.
 
 ### URL Parameters
 
-| Parameter    | Required | Description                               |
-| ------------ | -------- | ----------------------------------------- |
-| permitNumber | true     | A string matching the well permit number. |
-| date         | true     | A string formatted 'YYYY-MM'.             |
+| Parameter    | Type   | Restrictions | Description                               |
+| ------------ | ------ | ------------ | ----------------------------------------- |
+| permitNumber | string | required     | A string matching the well permit number. |
+| date         | string | required     | A string formatted 'YYYY-MM'.             |
+
+### Body Properties
+
+Expected structure of the body is described here: [Meter Reading Properties](#meter-reading-properties)
+
+<aside class="notice">
+  If the permitNumber or date properties are specified in the body, they will be overwritten by the permitNumber and date properties specified in the url.  There is no need to specify these properties in the body.
+</aside>

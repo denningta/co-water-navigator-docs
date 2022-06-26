@@ -1,0 +1,39 @@
+## Delete a Well Permit
+
+```shell
+curl "http://example.com/api/kittens/2" \
+  -X DELETE \
+  -H "Authorization: token"
+```
+
+```javascript
+const kittn = require("kittn");
+
+let api = kittn.authorize("meowmeowmeow");
+let max = api.kittens.delete(2);
+```
+
+> The above command returns the record deleted:
+
+```json
+{
+  "date": "2021-02",
+  "permitNumber": "FP-63209",
+  "flowMeter": {
+    "value": 150
+  }
+}
+```
+
+This endpoint deletes a meter reading.
+
+### HTTP Request
+
+`DELETE /api/meter-readings/{permitNumber}/{date}`
+
+### URL Parameters
+
+| Parameter    | Required | Description                               |
+| ------------ | -------- | ----------------------------------------- |
+| permitNumber | true     | A string matching the well permit number. |
+| date         | true     | A string formatted 'YYYY-MM'.             |

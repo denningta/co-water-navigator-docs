@@ -1,26 +1,36 @@
 ## Delete a Meter Reading
 
 ```shell
-curl "http://example.com/api/kittens/2" \
-  -X DELETE \
-  -H "Authorization: token"
+curl "<%= config[:endpoint] %>/api/meter-readings/63209-FP/2022-06" \\
+  -X DELETE
 ```
 
 ```javascript
-const kittn = require("kittn");
+const axios = require("axios");
 
-let api = kittn.authorize("meowmeowmeow");
-let max = api.kittens.delete(2);
+const options = {
+  method: "DELETE",
+  url: "<%= config[:endpoint] %>/api/meter-readings/632090-FP/2022-06",
+};
+
+axios
+  .request(options)
+  .then((response) => {
+    console.log(response.data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 ```
 
 > The above command returns the record deleted:
 
 ```json
 {
-  "date": "2021-02",
-  "permitNumber": "FP-63209",
+  "date": "2022-06",
+  "permitNumber": "63209-FP",
   "flowMeter": {
-    "value": 150
+    "value": 200
   }
 }
 ```
@@ -33,7 +43,7 @@ This endpoint deletes a meter reading.
 
 ### URL Parameters
 
-| Parameter    | Required | Description                               |
-| ------------ | -------- | ----------------------------------------- |
-| permitNumber | true     | A string matching the well permit number. |
-| date         | true     | A string formatted 'YYYY-MM'.             |
+| Parameter    | Type   | Restrictions | Description                               |
+| ------------ | ------ | ------------ | ----------------------------------------- |
+| permitNumber | string | required     | A string matching the well permit number. |
+| date         | string | required     | A string formatted 'YYYY-MM'.             |

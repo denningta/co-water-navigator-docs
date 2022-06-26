@@ -1,0 +1,51 @@
+## Delete Administrative Report
+
+```shell
+curl "http://example.com/api/kittens/2" \
+  -X DELETE \
+  -H "Authorization: token"
+```
+
+```javascript
+const axios require('axios');
+
+const options = {
+  method: 'DELETE',
+  url: '<%= config[:endpoint] %>/api/administrative-reports/63209-FP/2022',
+}
+
+axios
+  .request(options)
+  .then((response) => {
+    console.log(response.data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+```
+
+> The above command returns the record deleted:
+
+```json
+{
+  "date": "2022",
+  "permitNumber": "FP-63209",
+  "allowedAppropriation": {
+    "value": 100
+  }
+  // ...etc
+}
+```
+
+This endpoint deletes a meter reading.
+
+### HTTP Request
+
+`DELETE /api/meter-readings/{permitNumber}/{year}`
+
+### URL Parameters
+
+| Parameter    | Type   | Restrictions | Description                                  |
+| ------------ | ------ | ------------ | -------------------------------------------- |
+| permitNumber | string | true         | A string matching the well permit number.    |
+| year         | string | true         | The year matching the administrative report. |

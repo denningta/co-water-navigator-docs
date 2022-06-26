@@ -1,17 +1,18 @@
-| Property                       | Type                            | Restrictions | Description                                                 |
-| ------------------------------ | ------------------------------- | ------------ | ----------------------------------------------------------- |
-| calendarYear                   | number                          | required     | The calendar year associated with the administrative report |
-| originalAppropriation          | number                          | optional     | Line 1                                                      |
-| allowedAppropriation           | number                          | optional     | Line 2                                                      |
-| line3                          | number                          | optional     | Line 3                                                      |
-| maxBankingReserve              | number                          | optional     | Line 4                                                      |
-| bankingReserveLastYear         | number                          | optional     | Line 5                                                      |
-| pumpingLimitThisYear           | number                          | optional     | Line 6                                                      |
-| line6Option                    | "a" or "b"                      | optional     |                                                             |
-| totalPumpedThisYear            | number                          | optional     | Line 7                                                      |
-| changeInBankingReserveThisYear | number                          | optional     | Line 8                                                      |
-| bankingReserveThisYear         | number                          | optional     | Line 9                                                      |
-| line10                         | number                          | optional     | Line 10                                                     |
-| pumpingLimitNextYear           | number                          | optional     | Line 11                                                     |
-| dateTimeCreated                | Date                            | read-only    |                                                             |
-| wellUsageData                  | [WellUsage](#well-usage-fields) | optional     | An object describing the well usage conditions              |
+| Property                       | Type                                            | Restrictions | Description                                                  |
+| ------------------------------ | ----------------------------------------------- | ------------ | ------------------------------------------------------------ |
+| permitNumber                   | string                                          | required     | The permit number associated with the administratrive report |
+| year                           | number                                          | required     | The calendar year associated with the administrative report  |
+| originalAppropriation          | [CalculatedValue](#calculated-value-properties) | optional     | Line 1                                                       |
+| allowedAppropriation           | [CalculatedValue](#calculated-value-properties) | optional     | Line 2                                                       |
+| line3                          | [CalculatedValue](#calculated-value-properties) | optional     | Line 3                                                       |
+| maxBankingReserve              | [CalculatedValue](#calculated-value-properties) | optional     | Line 4                                                       |
+| bankingReserveLastYear         | [CalculatedValue](#calculated-value-properties) | optional     | Line 5                                                       |
+| pumpingLimitThisYear           | [CalculatedValue](#calculated-value-properties) | optional     | Line 6                                                       |
+| line6Option                    | "a" or "b"                                      | optional     |                                                              |
+| totalPumpedThisYear            | [CalculatedValue](#calculated-value-properties) | optional     | Line 7                                                       |
+| changeInBankingReserveThisYear | [CalculatedValue](#calculated-value-properties) | optional     | Line 8                                                       |
+| bankingReserveThisYear         | [CalculatedValue](#calculated-value-properties) | optional     | Line 9                                                       |
+| line10                         | [CalculatedValue](#calculated-value-properties) | optional     | Line 10                                                      |
+| pumpingLimitNextYear           | [CalculatedValue](#calculated-value-properties) | optional     | Line 11                                                      |
+| dateTimeCreated                | Date                                            | read-only    |                                                              |
+| wellUsageData                  | [WellUsage](#well-usage-properties)             | optional     | An object describing the well usage conditions               |

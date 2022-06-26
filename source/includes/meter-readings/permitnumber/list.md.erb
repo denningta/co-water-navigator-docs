@@ -1,14 +1,31 @@
 ## List Meter Readings
 
+> Send a get request to the meter-readings endpoint with optional query parameters:
+
 ```shell
-curl "https://cowaternavigator/api/meter-readings/FP-63209?year=2021&year=2022"
+curl "<%= config[:endpoint] %>/api/meter-readings?permit=FP-63209&year=2021&year=2022"
 ```
 
 ```javascript
-const kittn = require("kittn");
+const axios = require("axios");
 
-let api = kittn.authorize("meowmeowmeow");
-let kittens = api.kittens.get();
+const options = {
+  method: "GET",
+  url: "<%= config[:endpoint] %>/api/meter-readings",
+  params: {
+    permit: "63209-FP",
+    year: ["2021", "2022"],
+  },
+};
+
+axios
+  .request(options)
+  .then((response) => {
+    console.log(response.data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 ```
 
 > Successful deletion will return the deleted records in JSON:
@@ -18,33 +35,32 @@ let kittens = api.kittens.get();
   {
     "date": "2021-01",
     "permitNumber": "FP-63209"
+    // etc...
   },
   {
     "date": "2021-02",
     "permitNumber": "FP-63209"
+    // etc...
   },
   {
     "date": "2022-01",
     "permitNumber": "FP-63209"
+    // etc...
   }
-  ...etc
+  // etc...
 ]
 ```
 
-This endpoint retrieves all meter readings for a permit number.
+This endpoint retrieves meter readings for a permit number.
 
 ### HTTP Request
 
-`GET /api/meter-readings/{permitNumber}`
-
-### URL Parameters
-
-| Parameter    | Required | Description                               |
-| ------------ | -------- | ----------------------------------------- |
-| permitNumber | true     | A string matching the well permit number. |
+`GET /api/meter-readings`
 
 ### Query Parameters
 
-| Parameter | Required | Description                                          |
-| --------- | -------- | ---------------------------------------------------- |
-| year      | false    | Define a year to retrieve all records for that year. |
+| Parameter    | Type   | Restrictions | Description                                          |
+| ------------ | ------ | ------------ | ---------------------------------------------------- |
+| permitNumber | string | optional     | A string matching the well permit number.            |
+| year         | string | optional     | A string matching the calandar year of well permits. |
+| date         | string | optional     | A string formatted 'YYYY-MM'.                        |

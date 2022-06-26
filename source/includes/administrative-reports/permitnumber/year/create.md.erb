@@ -3,50 +3,58 @@
 > Here we are creating two new records, one with a flowMeter value and one with a powerMeter value.
 
 ```shell
-curl -X POST "https://cowaternavigator/api/administrative-reports/FP-63209" \
-  -d \
-  [ \
-    { \
-      "date": "2021-01", \
-      "flowMeter": { \
-        "value": 200 \
-      } \
-    }, \
-    { \
-      "date": "2021-02", \
-      "powerMeter": { \
-        "value": 500 \
-      } \
-    } \
-  ]
+curl -X POST "https://cowaternavigator/api/administrative-reports/63209-FP/2022" \\
+  -d \\
+  { \\
+    "allowedAppropriation": { \\
+      "value": 50, \\
+    }, \\
+    "bankingReserveLastYear": { \\
+      "value": 0, \\
+    } \\
+  }
+
 ```
 
 ```javascript
-const kittn = require("kittn");
+const axios require('axios');
 
-let api = kittn.authorize("meowmeowmeow");
-let kittens = api.kittens.get();
+const options = {
+  method: 'POST',
+  url: '<%= config[:endpoint] %>/api/administrative-reports/63209-FP/2022',
+  body: {
+    allowedAppropriation: {
+      value: 50
+    },
+    bankingReserveLastYear: {
+      value: 0
+    }
+  }
+}
+
+axios
+  .request(options)
+  .then((response) => {
+    console.log(response.data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 ```
 
 > Successful creation will return the records in JSON.
 
 ```json
-[
-  {
-    "date": "2021-01",
-    "permitNumber": "FP-63209",
-    "flowMeter": {
-      "value": 200
-    }
+{
+  "permit": "63209-FP",
+  "year": "2022",
+  "allowedAppropriation": {
+    "value": 50
   },
-  {
-    "date": "2021-02",
-    "permitNumber": "FP-63209",
-    "powerMeter": {
-      "value": 500
-    }
+  "bankingReserveLastYear": {
+    "value": 0
   }
-]
+}
 ```
 
 This endpoint creates new a new administrative report
@@ -65,11 +73,11 @@ If a record already exists that matches any permitNumber and date of the request
 
 ### URL Paramater
 
-| Property     | Type   | Restrictions | Description                                         |
-| ------------ | ------ | ------------ | --------------------------------------------------- |
-| permitNumber | string | required     | The well permit number identifying the well.        |
-| year         | string | required     | The year corresponding to the administrative report |
+| Parameter    | Type   | Restrictions | Description                                  |
+| ------------ | ------ | ------------ | -------------------------------------------- |
+| permitNumber | string | true         | A string matching the well permit number.    |
+| year         | string | true         | The year matching the administrative report. |
 
 ### Body Properties
 
-<%= partial "includes/administrative-reports/properties/administrative-report-properties.md.erb" %>
+Expected structure of the body is described in [Administrative Report Properties](#administrative-report-properties)

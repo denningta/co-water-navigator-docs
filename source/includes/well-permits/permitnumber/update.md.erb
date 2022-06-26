@@ -1,0 +1,50 @@
+## Update a Well Permit
+
+```shell
+curl -X PATCH "https://cowaternavigator/api/administrative-reports/FP-63209/2022" \
+  -d { "flowMeter": { "value": "150" } }
+
+```
+
+```javascript
+const kittn = require("kittn");
+
+let api = kittn.authorize("meowmeowmeow");
+let kittens = api.kittens.get();
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "date": "2021-01",
+  "permitNumber": "FP-63209",
+  "flowMeter": {
+    "value": 150
+  }
+  // ...etc
+}
+```
+
+This endpoint creates a new meter reading.
+
+The record to be created should be send in the body of the request.
+
+<aside class="warning">
+  Specifying a property that already exists in the database will overwrite that data.  Any property not specified will remain unchanged.
+</aside>
+
+### HTTP Request
+
+`POST /api/administrative-reports/{permitNumber}/{year}`
+
+### URL Parameters
+
+| Parameter    | Required | Description                                         |
+| ------------ | -------- | --------------------------------------------------- |
+| permitNumber | true     | A string matching the well permit number.           |
+| year         | true     | The year associated with the administrative report. |
+
+### Body Properties
+
+<%= partial "includes/administrative-reports/properties/administrative-report-properties.md.erb" %>

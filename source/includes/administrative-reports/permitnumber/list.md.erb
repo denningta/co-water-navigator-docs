@@ -1,14 +1,29 @@
 ## List Administrative Reports
 
 ```shell
-curl "https://cowaternavigator/api/administrative-reports/63209-FP"
+curl "<%= config[:endpoint] %>/api/administrative-reports?permitnumber=63209-FP&year=2022&year=2021&year=2020"
 ```
 
 ```javascript
-const kittn = require("kittn");
+const axios require('axios');
 
-let api = kittn.authorize("meowmeowmeow");
-let kittens = api.kittens.get();
+const options = {
+  method: 'GET',
+  url: '<%= config[:endpoint] %>/api/administrative-reports',
+  params: {
+    permitNumber: '63209-FP',
+    year: ['2022', '2021', '2020']
+  }
+}
+
+axios
+  .request(options)
+  .then((response) => {
+    console.log(response.data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 ```
 
 > Successful deletion will return the deleted records in JSON:
@@ -16,18 +31,20 @@ let kittens = api.kittens.get();
 ```json
 [
   {
-    "date": "2021-01",
-    "permitNumber": "FP-63209"
+    "permitNumber": "FP-63209",
+    "year": 2022
+    // ...etc
   },
   {
-    "date": "2021-02",
-    "permitNumber": "FP-63209"
+    "permitNumber": "FP-63209",
+    "year": 2021
+    // ...etc
   },
   {
-    "date": "2022-01",
-    "permitNumber": "FP-63209"
+    "permitNumber": "FP-63209",
+    "year": 2020
+    // ...etc
   }
-  // ...etc
 ]
 ```
 
@@ -37,16 +54,11 @@ This data corresponds to the DBB-013 Administrative Reporting form.
 
 ### HTTP Request
 
-`GET /api/administrative-reports/{permitNumber}`
-
-### URL Parameters
-
-| Parameter    | Required | Description                               |
-| ------------ | -------- | ----------------------------------------- |
-| permitNumber | true     | A string matching the well permit number. |
+`GET /api/administrative-reports`
 
 ### Query Parameters
 
-| Parameter | Required | Description                                          |
-| --------- | -------- | ---------------------------------------------------- |
-| year      | false    | Define a year to retrieve all records for that year. |
+| Parameter    | Type   | Restrictions | Description                                                        |
+| ------------ | ------ | ------------ | ------------------------------------------------------------------ |
+| permitNumber | string | requried     | A string matching the well permit number.                          |
+| year         | string | optional     | Define a year to retrieve the administrative report for that year. |

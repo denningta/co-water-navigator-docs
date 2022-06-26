@@ -1,0 +1,66 @@
+## Update Administrative Report
+
+```shell
+curl -X PATCH "https://cowaternavigator/api/administrative-reports/FP-63209/2022" \
+  -d { "allowedAppropriation": { "value": 100 } }
+
+```
+
+```javascript
+const axios require('axios');
+
+const options = {
+  method: 'PATCH',
+  url: '<%= config[:endpoint] %>/api/administrative-reports/63209-FP/2022',
+  body: {
+    allowedAppropriation: {
+      value: 100
+    },
+  }
+}
+
+axios
+  .request(options)
+  .then((response) => {
+    console.log(response.data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "date": "2021-01",
+  "permitNumber": "FP-63209",
+  "allowedAppropriation": {
+    "value": 100
+  }
+  // ...etc
+}
+```
+
+This endpoint creates a new meter reading.
+
+The record to be created should be send in the body of the request.
+
+<aside class="warning">
+  Specifying a property that already exists in the database will overwrite that data.  Any property not specified will remain unchanged.
+</aside>
+
+### HTTP Request
+
+`PATCH /api/administrative-reports/{permitNumber}/{year}`
+
+### URL Parameters
+
+| Parameter    | Type   | Restrictions | Description                                  |
+| ------------ | ------ | ------------ | -------------------------------------------- |
+| permitNumber | string | true         | A string matching the well permit number.    |
+| year         | string | true         | The year matching the administrative report. |
+
+### Body Properties
+
+Expected structure of the body is described in [Administrative Report Properties](#administrative-report-properties)

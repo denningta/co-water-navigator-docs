@@ -24,6 +24,7 @@ interface CalculatedValue {
   value: number;
   shouldBe: number | undefined;
   calculationState: "success" | "warning" | "error" | undefined;
+  calculationMessage: string;
   source: "user" | "calculation";
 }
 ```
@@ -45,8 +46,9 @@ interface CalculatedValue {
     "value": "0.00"
   },
   "acreFeetPumpedYTD": {
-    "calculationShouldBe": "0.00",
-    "calculationState": "success",
+    "calculationShouldBe": "10.00",
+    "calculationState": "warning",
+    "calculationMessage": "Warning: Expected 10.00",
     "source": "calculation",
     "value": "0.00"
   },
@@ -59,16 +61,22 @@ interface CalculatedValue {
   "dateTimeCreated": "Mon, 31 Jan 2022 15:12:18 GMT",
   "dateTimeUpdated": "Thu, 09 Jun 2022 15:02:11 GMT",
   "flowMeter": {
+    "calculationShouldBe": "399.63",
     "calculationState": "success",
+    "source": "user",
     "value": "399.63"
   },
   "permitNumber": "31643-FP",
   "powerConsumptionCoef": {
     "calculationState": "success",
+    "calculationShouldBe": "285.36",
+    "source": "user",
     "value": "285.36"
   },
   "powerMeter": {
     "calculationState": "success",
+    "calculationShouldBe": "40536.00",
+    "source": "user",
     "value": "40536.00"
   },
   "readBy": "GT",

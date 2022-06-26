@@ -1,26 +1,42 @@
 ## Update a Meter Reading
 
 ```shell
-curl -X PATCH "https://cowaternavigator/api/meter-readings/FP-63209/2022-06" \
-  -d { "flowMeter": { "value": "150" } }
+curl -X PATCH "<%= config[:endpoint] %>/api/meter-readings/63209-FP/2022-06" \\
+  -d { "flowMeter": { "value": "200" } }
 
 ```
 
 ```javascript
-const kittn = require("kittn");
+const axios = require("axios");
 
-let api = kittn.authorize("meowmeowmeow");
-let kittens = api.kittens.get();
+const options = {
+  method: "PATCH",
+  url: "<%= config[:endpoint] %>/api/meter-readings/63209-FP/2022-06",
+  data: {
+    flowMeter: {
+      value: 200,
+    },
+  },
+};
+
+axios
+  .request(options)
+  .then((response) => {
+    console.log(response.data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 ```
 
 > The above command returns JSON structured like this:
 
 ```json
 {
-  "date": "2021-01",
-  "permitNumber": "FP-63209",
+  "date": "2022-06",
+  "permitNumber": "63209-FP",
   "flowMeter": {
-    "value": 150
+    "value": 200
   }
   // ...etc
 }
@@ -36,11 +52,19 @@ The record to be created should be send in the body of the request.
 
 ### HTTP Request
 
-`POST /api/meter-readings/{permitNumber}/{date}`
+`PATCH /api/meter-readings/{permitNumber}/{date}`
 
 ### URL Parameters
 
-| Parameter    | Required | Description                               |
-| ------------ | -------- | ----------------------------------------- |
-| permitNumber | true     | A string matching the well permit number. |
-| date         | true     | A string formatted 'YYYY-MM'.             |
+| Parameter    | Type   | Restrictions | Description                               |
+| ------------ | ------ | ------------ | ----------------------------------------- |
+| permitNumber | string | required     | A string matching the well permit number. |
+| date         | string | required     | A string formatted 'YYYY-MM'.             |
+
+### Body Properties
+
+Expected structure of the body is described here: [Meter Reading Properties](#meter-reading-properties)
+
+<aside class="notice">
+  If the permitNumber or date properties are specified in the body, they will be overwritten by the permitNumber and date properties specified in the url.  There is no need to specify these properties in the body.
+</aside>
